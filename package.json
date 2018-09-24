@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "normalize-scss": "^7.0.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-hot-loader": "^4.3.11",
     "react-router": "^4.2.0",
-    "react-static": "^5.9.8"
+    "react-static": "^5.9.8",
+    "susy": "^2.2.12"
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",
