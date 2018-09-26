@@ -3,7 +3,7 @@ body {
     font-family: map-get($font-family, regular);
     font-size: map-get($font-size, predefault);
     line-height: map-get($line-height, medium);
-    color: map-get($colors, midnight);
+    color: map-get($colors, mineShaft);
     -webkit-font-smoothing: antialiased;
 }
 
@@ -29,7 +29,7 @@ h4,
 h5,
 h6 {
     font-family: map-get($font-family, regular);
-    color: rgba(map-get($colors, midnight), 0.9);
+    color: map-get($colors, mineShaft);
 }
 
 //h1 {
@@ -57,12 +57,8 @@ h6 {
 //}
 
 a {
-    color: map-get($colors, mine-shaft);
+    color: map-get($colors, mineShaft);
     text-decoration: underline;
-
-    &:hover {
-        background-color: tint(map-get($colors, brand), 89.7%);
-    }
 }
 
 ul,

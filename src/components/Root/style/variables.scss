@@ -56,8 +56,8 @@ $font-size: (
     afterlarge: 40px,
     large: 44px,
     largeplus: 48px,
-    prehuge: 60px,
-    huge: 72px,
+    prehuge: 54px,
+    huge: 64px,
     extrahuge: 90px
 );
 
@@ -76,46 +76,24 @@ $line-height: (
 
 // Color
 $colors: (
-    brand: #0066FF,
-    midnight: #001433,
-    error: #F45C58,
-    information: #FFF2CA,
-    success: #3CDFB0,
-    cta: #FFAA40,
-    link-water: #DEEEF5,
-    catskill-white: #F1F5F8,
     white: #FFFFFF,
-    alabaster: #F9F9F9,
-    alabaster-light: #FCFCFC,
-    seashell: #F1F1F1,
-    gallery: #EDEDED,
-    mercury: #E5E7EA,
-    mercury-dark: #E6E6E6,
-    alto: #D9D9D9,
-    silver: #CCD0D6,
-    silver-chalice: #A7A7A7,
-    dove-gray: #737373,
-    emperor: #505050,
-    tundora: #404040,
-    mine-shaft: #272727,
+    whisper: #FCFBFD,
+    whisperLight: #FAF9FC,
+    regentGray: #8E9BA9,
+    martinique: #3F3A57,
+    mineShaft: #333333,
     black: #000000,
-    loblolly: #B6BEC6,
-    lightgray: #FAFAFB,
-    light-midnight: #192B47,
-    gray-midnight: #4C5A70,
-    battleship-grey: #667285,
-    dusty-gray: #999999
+    persimmon: #FE5759,
+    redOrange: #FF3333,
+    cinnabar: #EF3E41,
+    willowBrook: #EBF4E7,
+    silverTree: #65B99C,
+    aquamarineBlue: #7FD3E2
 );
 
 // Global
 $minWidth: 320px;
 $headerHeight: 60px;
-$slant-width: 100vw;
-$slant-height-desktop: 96px;
-$slant-height-tablet: 80px;
-$slant-height-mobile: 48px;
-$slant-buffer: 48px;
-$inputHeight: 56px;
 
 // Breakpoints
 $breakpoints: (
@@ -139,7 +117,7 @@ $breakpoints: (
 // Grid
 $susy: (
     columns: 12,
-    container: 1096px,
+    container: 1220px,
     gutters: 1/4,
     global-box-sizing: border-box
 );
