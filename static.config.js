@@ -1,5 +1,21 @@
 // import axios from 'axios';
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import path from 'path';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import {generateFontConfig} from './webpack/generateFontConfig';
+
+const PATHS = {
+    source: path.join(__dirname, 'src'),
+    build: path.join(__dirname, 'dist'),
+};
+
+const FONTS = [
+    {
+        name: 'montserrat',
+        styles: ['bold', 'italic', 'light', 'medium', 'regular', 'semibold']
+    }
+];
+
+const fontLoader = generateFontConfig({PATHS, FONTS}); // Dynamic generation of rules for fonts
 
 export default {
     getSiteData: () => ({
@@ -81,11 +97,12 @@ export default {
                     },
                     defaultLoaders.cssLoader,
                     defaultLoaders.jsLoader,
-                    defaultLoaders.fileLoader,
+                    ...fontLoader,
+                    defaultLoaders.fileLoader
                 ],
-            },
+            }
         ];
 
         return config;
-    },
+    }
 }

@@ -1,8 +1,9 @@
 @import '../../../node_modules/normalize-scss/sass/normalize';
 @import '../../../node_modules/susy/sass/susy';
-@import 'family';
-@import 'mixins';
-@import 'variables';
-@import 'base';
-@import 'fonts';
-@import 'typography';
+@import './style/family';
+@import './style/mixins';
+@import './style/variables';
+@import './style/base';
+@import './style/fonts';
+@import './style/reset';
+@import './style/typography';
