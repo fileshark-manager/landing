@@ -1,0 +1,54 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$Technology: '.Technology';
+
+#{$Technology} {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 36px 10px;
+    border: 1px solid rgba(map-get($colors, martinique), 0.2);
+    background-color: map-get($colors, white);
+    border-radius: 4px;
+
+    @include respond-to('intermediary') {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: flex-end;
+        width: 80px;
+        padding-right: 10px;
+
+        @include respond-to('intermediary') {
+            width: 100%;
+            justify-content: center;
+            padding-right: 0;
+        }
+    }
+
+    &__content {
+        width: calc(100% - 80px);
+        padding-top: 6px;
+
+        @include respond-to('intermediary') {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 7px;
+    }
+
+    &__description {
+        max-width: 83%;
+
+        @include respond-to('increased') {
+            max-width: 100%;
+        }
+    }
+}
