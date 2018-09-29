@@ -22,6 +22,7 @@
         "react-hot-loader": "^4.3.11",
         "react-router": "^4.2.0",
         "react-static": "^5.9.8",
+        "recompose": "^0.30.0",
         "susy": "^2.2.12"
     },
     "devDependencies": {
