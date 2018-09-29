@@ -1,0 +1,31 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$CtaBox: '.CtaBox';
+
+#{$CtaBox} {
+    @include blockPaddingVertical;
+    @include blockPaddingHorizontal;
+
+    background-color: map-get($colors, persimmon);
+    background-image: url(../../assets/images/bg-cta-left.svg), url(../../assets/images/bg-cta-right.svg);
+    background-position: calc(50% - 538px) 50%, calc(50% + 538px) 50%;
+    background-repeat: no-repeat, no-repeat;
+
+    &__header {
+        @include headingGap;
+
+        text-align: center;
+
+        h2 {
+            color: map-get($colors, white);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+}

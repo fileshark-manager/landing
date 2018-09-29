@@ -1,6 +1,10 @@
 @import '~susy/sass/susy';
 @import './family';
 
+@mixin headingGap {
+    margin-bottom: 40px;
+}
+
 @mixin fontFace($fontsList) {
     @each $fontsDir, $fontMap in $fontsList {
 
@@ -28,9 +32,9 @@
 // Vertical paddings
 @mixin blockPaddingVertical($top: "", $bottom: "") {
     $padding: (
-        desktop: 50px,
-        tablet: 30px,
-        mobile: 20px
+        desktop: 100px,
+        tablet: 50px,
+        mobile: 30px
     );
 
     @if $top == "top" {
@@ -136,3 +140,69 @@
         @error "Не указано значение для '#{$breakpoint}'.";
     }
 }
+
+@mixin heading($type) {
+    @if ($type == 'h1') {
+        font-family: map-get($font-family, bold);
+        font-size: map-get($font-size, prehuge);
+        line-height: map-get($line-height, prelittle);
+
+        @include respond-to('increased') {
+            font-size: map-get($font-size, large);
+            line-height: map-get($line-height, little);
+        }
+
+        @include respond-to('prebig') {
+            font-size: map-get($font-size, semilarge);
+            line-height: map-get($line-height, little);
+        }
+    }
+    @else if ($type == 'h2') {
+        font-family: map-get($font-family, semibold);
+        font-size: map-get($font-size, large);
+        line-height: map-get($line-height, little);
+
+        @include respond-to('increased') {
+            font-size: map-get($font-size, semilarge);
+            line-height: map-get($line-height, little);
+        }
+
+        @include respond-to('prebig') {
+            font-size: map-get($font-size, mediumplus);
+            line-height: map-get($line-height, little);
+        }
+    }
+    @else if ($type == 'h3') {
+        font-family: map-get($font-family, semibold);
+        font-size: map-get($font-size, premedium);
+        line-height: map-get($line-height, little);
+
+        @include respond-to('prebig') {
+            font-size: map-get($font-size, default);
+            line-height: map-get($line-height, little);
+        }
+    }
+    @else if ($type == 'h4') {
+        font-family: map-get($font-family, semibold);
+        font-size: map-get($font-size, default);
+        line-height: map-get($line-height, little);
+
+        @include respond-to('prebig') {
+            font-size: map-get($font-size, predefault);
+            line-height: map-get($line-height, little);
+        }
+    }
+    @else if ($type == 'h5') {
+        font-family: map-get($font-family, regular);
+        font-size: map-get($font-size, default);
+        line-height: map-get($line-height, presmall);
+    }
+    @else if ($type == 'h6') {
+        font-size: map-get($font-size, extrasmall);
+        line-height: map-get($line-height, presmall);
+    }
+    @else {
+        @error 'Heading type is not defined.';
+    }
+}
+

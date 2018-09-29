@@ -1,8 +1,8 @@
 body {
     font-weight: 400;
     font-family: map-get($font-family, regular);
-    font-size: map-get($font-size, predefault);
-    line-height: map-get($line-height, medium);
+    font-size: map-get($font-size, smallplus);
+    line-height: map-get($line-height, small);
     color: map-get($colors, mineShaft);
     -webkit-font-smoothing: antialiased;
 }
@@ -28,33 +28,32 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: map-get($font-family, regular);
     color: map-get($colors, mineShaft);
 }
 
-//h1 {
-//    @include heading('h1');
-//}
-//
-//h2 {
-//    @include heading('h2');
-//}
-//
-//h3 {
-//    @include heading('h3');
-//}
-//
-//h4 {
-//    @include heading('h4');
-//}
-//
-//h5 {
-//    @include heading('h5');
-//}
-//
-//h6 {
-//    @include heading('h6')
-//}
+h1 {
+    @include heading('h1');
+}
+
+h2 {
+    @include heading('h2');
+}
+
+h3 {
+    @include heading('h3');
+}
+
+h4 {
+    @include heading('h4');
+}
+
+h5 {
+    @include heading('h5');
+}
+
+h6 {
+    @include heading('h6')
+}
 
 a {
     color: map-get($colors, mineShaft);
