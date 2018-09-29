@@ -10,8 +10,6 @@ import CtaBox from '../components/CtaBox';
  */
 const Home = () => (
     <Layout>
-        Home page content
-
         <Technologies />
 
         <CtaBox />

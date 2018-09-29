@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Header from '../Header';
 import Main from '../Main';
 import Footer from '../Footer';
 
@@ -13,7 +14,7 @@ const Layout = ({
 }) => (
     <div className="Layout">
         <div className="Layout__header">
-
+            <Header />
         </div>
 
         <div className="Layout__main">
