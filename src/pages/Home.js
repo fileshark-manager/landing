@@ -1,16 +1,15 @@
-import React from 'react'
-import {withSiteData} from 'react-static'
-// import logoImg from '../logo.png'
+import React from 'react';
+import {withSiteData} from 'react-static';
+import Layout from '../components/Layout';
 
 /**
  * Renders Home component
  * @returns {JSX}
  */
 const Home = () => (
-    <div>
-        Home
-    </div>
+    <Layout>
+        Home page content
+    </Layout>
 );
 
 export default withSiteData(Home);
-
