@@ -21,42 +21,44 @@ export default {
     getSiteData: () => ({
         title: 'React Static',
     }),
-    getRoutes: async () => {
-        // const {data: posts} = await axios.get('https://jsonplaceholder.typicode.com/posts')
-        return [
-            {
-                path: '/',
-                component: 'src/pages/Home',
-            }
-            // {
-            //     path: '/about',
-            //     component: 'src/containers/About',
-            // },
-            // {
-            //     path: '/blog',
-            //     component: 'src/containers/Blog',
-            //     getData: () => ({
-            //         posts,
-            //     }),
-            //     children: posts.map(post => ({
-            //         path: `/post/${post.id}`,
-            //         component: 'src/containers/Post',
-            //         getData: () => ({
-            //             post,
-            //         }),
-            //     })),
-            // },
-            // {
-            //     is404: true,
-            //     component: 'src/containers/404',
-            // },
-        ]
-    },
+    getRoutes: async () => ([
+        {
+            path: '/',
+            component: 'src/pages/Home',
+        }
+        // {
+        //     path: '/about',
+        //     component: 'src/containers/About',
+        // },
+        // {
+        //     path: '/blog',
+        //     component: 'src/containers/Blog',
+        //     getData: () => ({
+        //         posts,
+        //     }),
+        //     children: posts.map(post => ({
+        //         path: `/post/${post.id}`,
+        //         component: 'src/containers/Post',
+        //         getData: () => ({
+        //             post,
+        //         }),
+        //     })),
+        // },
+        // {
+        //     is404: true,
+        //     component: 'src/containers/404',
+        // },
+    ]),
     webpack: (config, {defaultLoaders, stage}) => {
         let loaders = [];
 
         if (stage === 'dev') {
-            loaders = [{loader: 'style-loader'}, {loader: 'css-loader'}, {loader: 'sass-loader'}]
+            loaders = [
+                {loader: 'style-loader'},
+                {loader: 'css-loader'},
+                {loader: 'postcss-loader'},
+                {loader: 'sass-loader'}
+            ];
         } else {
             loaders = [
                 {
@@ -66,6 +68,9 @@ export default {
                         minimize: stage === 'prod',
                         sourceMap: false,
                     },
+                },
+                {
+                    loader: 'postcss-loader'
                 },
                 {
                     loader: 'sass-loader',
@@ -84,7 +89,7 @@ export default {
                         },
                     },
                     use: loaders,
-                })
+                });
             }
         }
 
@@ -105,4 +110,4 @@ export default {
 
         return config;
     }
-}
+};
