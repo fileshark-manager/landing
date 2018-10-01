@@ -2,6 +2,7 @@ import React from 'react';
 import {withSiteData} from 'react-static';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
+import Features from '../components/Features';
 import Technologies from '../components/Technologies';
 import CtaBox from '../components/CtaBox';
 
@@ -12,6 +13,8 @@ import CtaBox from '../components/CtaBox';
 const Home = () => (
     <Layout>
         <Hero />
+
+        <Features />
 
         <Technologies />
 
