@@ -98,4 +98,12 @@ $Header: '.Header';
             display: none;
         }
     }
+
+    &__burger {
+        display: none;
+
+        @include respond-to('prebig') {
+            display: block;
+        }
+    }
 }
