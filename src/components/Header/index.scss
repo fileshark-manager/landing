@@ -4,16 +4,28 @@
 $Header: '.Header';
 
 #{$Header} {
-    @include blockPaddingHorizontal;
-
-    padding-top: 16px;
-    padding-bottom: 16px;
+    position: relative;
+    height: $headerHeight;
     background-color: map-get($colors, persimmon);
+    z-index: 100;
+
+    &__container {
+        @include blockPaddingHorizontal;
+
+        position: fixed;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-width: $minWidth;
+        height: $headerHeight;
+        background-color: map-get($colors, persimmon);
+    }
 
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        width: 100%;
 
         @include container;
     }

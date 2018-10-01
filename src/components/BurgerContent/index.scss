@@ -1,0 +1,50 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$BurgerContent: '.BurgerContent';
+
+#{$BurgerContent} {
+    @include blockPaddingHorizontal;
+
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: calc(100% - #{$headerHeight});
+    bottom: 0;
+    left: 0;
+    padding-top: 58px;
+    padding-bottom: 105px;
+    background-color: map-get($colors, persimmon);
+
+    &__list,
+    &__item {
+        @include list-reset;
+    }
+
+    &__item {
+        margin-bottom: 36px;
+        text-align: center;
+
+        @include f-last(1) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        font-family: map-get($font-family, regular);
+        font-size: map-get($font-size, mediumplus);
+        line-height: map-get($line-height, prelittle);
+        color: map-get($colors, white);
+        text-decoration: none;
+    }
+
+    &__footer {
+        @include blockPaddingHorizontal;
+
+        position: absolute;
+        display: block;
+        width: 100%;
+        bottom: 32px;
+        left: 0;
+    }
+}

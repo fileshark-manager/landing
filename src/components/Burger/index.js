@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Classnames from 'classnames';
 import flow from 'lodash/flow';
 import {withStateHandlers} from 'recompose';
+import BurgerContent from '../BurgerContent';
 import './index.scss';
 
 /**
@@ -28,6 +29,10 @@ const Burger = ({
 
                 <div className="Burger__line" />
             </button>
+
+            {isExpanded && (
+                <BurgerContent />
+            )}
         </div>
     );
 };
