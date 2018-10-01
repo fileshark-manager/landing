@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 import Logo from '../Logo';
+import Burger from '../Burger';
 import links from '../../data/headerNavigation';
 import './index.scss';
 
@@ -36,6 +37,10 @@ const Header = () => (
                     <Button
                         text="Buy"
                         size="small" />
+                </div>
+
+                <div className="Header__burger">
+                    <Burger />
                 </div>
             </div>
         </div>

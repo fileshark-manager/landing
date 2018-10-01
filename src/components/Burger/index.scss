@@ -1,0 +1,49 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$Burger: '.Burger';
+
+#{$Burger} {
+    &__wrapper {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+    &__line {
+        position: absolute;
+        width: 22px;
+        height: 2px;
+        top: 50%;
+        left: 50%;
+        margin-left: -11px;
+        margin-top: -1px;
+        background-color: map-get($colors, white);
+        @include transition(transform 0.2s ease);
+
+        @include f-first(1) {
+            transform: translateY(-7px);
+        }
+
+        @include f-last(1) {
+            transform: translateY(7px);
+        }
+    }
+
+    &#{$Burger}_isExpanded {
+        #{$Burger} {
+            &__line {
+                transform: scale(0.1, 1);
+
+                @include f-first(1) {
+                    transform: translateY(0) rotate(45deg) scale(1);
+                }
+
+                @include f-last(1) {
+                    transform: translateY(0) rotate(-45deg) scale(1);
+                }
+            }
+        }
+    }
+}
