@@ -196,6 +196,10 @@
         font-family: map-get($font-family, regular);
         font-size: map-get($font-size, default);
         line-height: map-get($line-height, medium);
+
+        @include respond-to('prebig') {
+            font-size: map-get($font-size, smallplus);
+        }
     }
     @else if ($type == 'h6') {
         font-size: map-get($font-size, extrasmall);

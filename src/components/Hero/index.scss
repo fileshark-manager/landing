@@ -28,11 +28,24 @@ $Hero: '.Hero';
     &__data {
         width: span(7);
         padding-bottom: 72px;
+
+        @include respond-to('increased') {
+            width: 100%;
+            padding-bottom: 62px;
+        }
+
+        @include respond-to('prebig') {
+            padding-bottom: 40px;
+        }
     }
 
     &__graphics {
         position: relative;
         width: span(9);
+
+        @include respond-to('increased') {
+            width: 100%;
+        }
     }
 
     &__image {
@@ -40,14 +53,37 @@ $Hero: '.Hero';
         top: -82px;
         left: -66px;
 
+        @include respond-to('increased') {
+            position: relative;
+            top: auto;
+            left: auto;
+            margin-bottom: -64px;
+        }
+
+        @include respond-to('prebig') {
+            margin-bottom: -30px;
+        }
+
         img {
             max-width: none;
             margin-bottom: 0;
+
+            @include respond-to('increased') {
+                max-width: 100%;
+            }
         }
     }
 
     &__title {
         margin-bottom: 15px;
+
+        @include respond-to('increased') {
+            text-align: center;
+        }
+
+        @include respond-to('prebig') {
+            margin-bottom: 8px;
+        }
 
         h1 {
             color: map-get($colors, white);
@@ -57,8 +93,21 @@ $Hero: '.Hero';
     &__subtitle {
         margin-bottom: 78px;
 
+        @include respond-to('increased') {
+            margin-bottom: 45px;
+            text-align: center;
+        }
+
         h5 {
-            color: map-get($colors, white);
+            color: rgba(map-get($colors, white), 0.8);
+        }
+    }
+
+    &__cta {
+        display: flex;
+
+        @include respond-to('increased') {
+            justify-content: center;
         }
     }
 
