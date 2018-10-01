@@ -145,7 +145,7 @@
     @if ($type == 'h1') {
         font-family: map-get($font-family, bold);
         font-size: map-get($font-size, prehuge);
-        line-height: map-get($line-height, prelittle);
+        line-height: map-get($line-height, prelittle) * 1.1;
 
         @include respond-to('increased') {
             font-size: map-get($font-size, large);
@@ -195,7 +195,7 @@
     @else if ($type == 'h5') {
         font-family: map-get($font-family, regular);
         font-size: map-get($font-size, default);
-        line-height: map-get($line-height, presmall);
+        line-height: map-get($line-height, medium);
     }
     @else if ($type == 'h6') {
         font-size: map-get($font-size, extrasmall);

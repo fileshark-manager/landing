@@ -1,0 +1,77 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$Hero: '.Hero';
+
+#{$Hero} {
+    @include blockPaddingHorizontal;
+    @include blockPaddingVertical;
+
+    position: relative;
+    background-color: map-get($colors, persimmon);
+    overflow: hidden;
+
+    &__wrapper {
+        @include container;
+
+        position: relative;
+        z-index: 1;
+    }
+
+    &__columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__data {
+        width: span(7);
+        padding-bottom: 72px;
+    }
+
+    &__graphics {
+        position: relative;
+        width: span(9);
+    }
+
+    &__image {
+        position: absolute;
+        top: -82px;
+        left: -66px;
+
+        img {
+            max-width: none;
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+
+        h1 {
+            color: map-get($colors, white);
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 78px;
+
+        h5 {
+            color: map-get($colors, white);
+        }
+    }
+
+    &__border {
+        position: absolute;
+        display: block;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+
+        svg {
+            display: block;
+            width: 100%;
+        }
+    }
+}
