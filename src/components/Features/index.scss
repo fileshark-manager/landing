@@ -1,0 +1,65 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$Features: '.Features';
+
+#{$Features} {
+    @include blockPaddingHorizontal;
+    @include blockPaddingVertical;
+
+    background-color: map-get($colors, white);
+    overflow: hidden;
+
+    &__wrapper {
+        @include container;
+    }
+
+    &__header {
+        @include headingGap;
+
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__graphics {
+        position: relative;
+        width: span(8);
+        height: 624px;
+    }
+
+    &__image {
+        position: absolute;
+        display: block;
+        width: 818px;
+        height: 100%;
+        top: -15px;
+        right: -38px;
+    }
+
+    &__data {
+        width: span(7.1);
+        padding-top: 30px;
+    }
+
+    &__list,
+    &__item {
+        @include list-reset;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: span(7);
+        margin-bottom: 54px;
+    }
+}

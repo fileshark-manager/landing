@@ -1,6 +1,8 @@
 import React from 'react';
 import Feature from '../Feature';
 import features from '../../data/features';
+import bgFeatures from '../../assets/images/bg-features.jpg';
+import './index.scss';
 
 /**
  * Renders Features component
@@ -14,7 +16,11 @@ const Features = () => (
             </div>
 
             <div className="Features__content">
-                <div className="Features__graphics" />
+                <div className="Features__graphics">
+                    <div className="Features__image">
+                        <img src={bgFeatures} alt="All you need in one place" />
+                    </div>
+                </div>
 
                 <div className="Features__data">
                     <ul className="Features__list">

@@ -6,22 +6,22 @@ import iconFilter from '../../components/IconFilter';
 export default [
     {
         Icon: iconUpload,
-        title: 'Загрузка файлов',
+        title: 'Upload files',
         description: 'Direkte bestilling rett till klinikken uten tillagte kosnader'
     },
     {
         Icon: iconFolder,
-        title: 'Создание папок',
+        title: 'Create folders',
         description: 'Finn spesialisten med kompetansen og fasilitetene du trenger for din behandling'
     },
     {
         Icon: iconText,
-        title: 'Описание папок и файлов',
+        title: 'Make descriptions',
         description: 'Se hva andre pasienter har sagt om klinikker, leger og spesienter'
     },
     {
         Icon: iconFilter,
-        title: 'Фильтры',
+        title: 'Filters',
         description: 'Finn en klinikk ner deg eller langt vekk'
     }
 ];
