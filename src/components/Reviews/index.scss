@@ -10,11 +10,10 @@ $Reviews: '.Reviews';
     @include blockPaddingVertical(top);
 
     background-color: map-get($colors, white);
+    overflow: hidden;
 
     &__wrapper {
         @include container;
-
-        border-bottom: 1px solid rgba(map-get($colors, mineShaft), 0.05);
     }
 
     &__content {
@@ -25,6 +24,14 @@ $Reviews: '.Reviews';
         }
     }
 
+    &__slider {
+        border-bottom: 1px solid rgba(map-get($colors, mineShaft), 0.05);
+
+        @include respond-to('prebig') {
+            margin-bottom: 30px;
+        }
+    }
+
     &__nav {
         position: absolute;
         display: block;
@@ -32,5 +39,18 @@ $Reviews: '.Reviews';
         left: 0;
         bottom: 65px;
         padding-left: span(2);
+
+        @include respond-to('increased') {
+            padding-left: 0;
+        }
+
+        @include respond-to('prebig') {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            left: auto;
+            bottom: auto;
+            padding-left: 0;
+        }
     }
 }

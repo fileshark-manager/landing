@@ -16,8 +16,19 @@ $Review: '.Review';
     &__data {
         width: span(7);
         margin-left: span(2);
-        padding-top: 100px;
         padding-bottom: 140px;
+
+        @include respond-to('increased') {
+            margin-left: 0;
+            padding-top: 0;
+        }
+
+        @include respond-to('prebig') {
+            width: span(16);
+            margin-bottom: 30px;
+            padding-bottom: 0;
+            text-align: center;
+        }
     }
 
     &__title {
@@ -30,12 +41,25 @@ $Review: '.Review';
         font-size: map-get($font-size, mediummore);
         line-height: map-get($line-height, medium);
         color: map-get($colors, mineShaft);
+
+        @include respond-to('increased') {
+            font-size: map-get($font-size, premedium);
+        }
+
+        @include respond-to('prebig') {
+            margin-bottom: 15px;
+            font-size: map-get($font-size, smallplus);
+        }
     }
 
     &__logo {
         img {
             margin-left: 0;
             margin-bottom: 0;
+
+            @include respond-to('prebig') {
+                margin-left: auto;
+            }
         }
     }
 
@@ -43,6 +67,22 @@ $Review: '.Review';
         display: flex;
         align-items: flex-end;
         width: span(7);
+
+        @include respond-to('increased') {
+            width: span(9);
+        }
+
+        @include respond-to('prebig') {
+            width: span(16);
+
+            img {
+                max-width: 80%;
+
+                @include respond-to('ultrasmall') {
+                    max-width: 100%;
+                }
+            }
+        }
 
         img {
             margin-bottom: 0;

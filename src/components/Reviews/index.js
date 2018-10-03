@@ -69,14 +69,16 @@ class Reviews extends Component {
             <section className="Reviews">
                 <div className="Reviews__wrapper">
                     <div className="Reviews__content">
-                        <Slider
-                            {...sliderSettings}
-                            beforeChange={this.onChange}
-                            ref={(slider) => (this.slider = slider)}>
-                            {
-                                reviews.map((review, idx) => <div key={idx}><Review {...review} /></div>)
-                            }
-                        </Slider>
+                        <div className="Reviews__slider">
+                            <Slider
+                                {...sliderSettings}
+                                beforeChange={this.onChange}
+                                ref={(slider) => (this.slider = slider)}>
+                                {
+                                    reviews.map((review, idx) => <div key={idx}><Review {...review} /></div>)
+                                }
+                            </Slider>
+                        </div>
 
                         <div className="Reviews__nav">
                             <Pagination
