@@ -32,6 +32,19 @@ $RoadMap: '.RoadMap';
 
     &__item {
         display: flex;
-        width: 24.3%;
+        width: span(4);
+
+        @include respond-to('increased') {
+            width: span(8);
+            margin-bottom: 15px;
+        }
+
+        @include respond-to('medium') {
+            width: span(16);
+
+            @include f-last(1) {
+                margin-bottom: 0;
+            }
+        }
     }
 }

@@ -3,6 +3,10 @@
 
 @mixin headingGap {
     margin-bottom: 40px;
+
+    @include respond-to('prebig') {
+        margin-bottom: 20px;
+    }
 }
 
 @mixin fontFace($fontsList) {
