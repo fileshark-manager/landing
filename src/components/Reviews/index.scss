@@ -18,8 +18,19 @@ $Reviews: '.Reviews';
     }
 
     &__content {
+        position: relative;
+
         * {
             outline: none;
         }
+    }
+
+    &__nav {
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        bottom: 65px;
+        padding-left: span(2);
     }
 }

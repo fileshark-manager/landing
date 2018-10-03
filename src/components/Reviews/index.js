@@ -8,7 +8,9 @@ import './index.scss';
 const sliderSettings = {
     adaptiveHeight: true,
     fade: true,
-    infinite: false
+    infinite: false,
+    swipeToSlide: false,
+    swipe: false
 };
 
 /**

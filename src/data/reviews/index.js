@@ -17,14 +17,14 @@ export default [
     {
         preview: slide2,
         title: 'Comments',
-        description: 'MediaManager for your CMS is the most useful resource I\'ve my career change to freelance writing.',
+        description: 'MediaManager for your CMS is the most useful resource I\'ve come across since I made my career change to freelance writing.',
         logo: logo2,
         name: 'Fanbook'
     },
     {
         preview: slide3,
         title: 'Comments',
-        description: 'MediaManager for your CMS is the most useful resource I\'ve come.',
+        description: 'MediaManager for your CMS is the most useful resource I\'ve come across since I made my career change to freelance writing.',
         logo: logo3,
         name: 'ShopTechnology'
     }
