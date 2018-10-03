@@ -1,0 +1,25 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+@import './slick';
+@import './slick-theme';
+
+$Reviews: '.Reviews';
+
+#{$Reviews} {
+    @include blockPaddingHorizontal;
+    @include blockPaddingVertical(top);
+
+    background-color: map-get($colors, white);
+
+    &__wrapper {
+        @include container;
+
+        border-bottom: 1px solid rgba(map-get($colors, mineShaft), 0.05);
+    }
+
+    &__content {
+        * {
+            outline: none;
+        }
+    }
+}

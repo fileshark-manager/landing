@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Technologies from '../components/Technologies';
+import Reviews from '../components/Reviews';
 import RoadMap from '../components/RoadMap';
 import CtaBox from '../components/CtaBox';
 
@@ -18,6 +19,8 @@ const Home = () => (
         <Features />
 
         <Technologies />
+
+        <Reviews />
 
         <RoadMap />
 

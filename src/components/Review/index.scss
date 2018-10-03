@@ -1,0 +1,50 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$Review: '.Review';
+
+#{$Review} {
+    width: 100%;
+    background-color: map-get($colors, white);
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    &__data {
+        width: span(7);
+        margin-left: span(2);
+        padding-top: 100px;
+    }
+
+    &__title {
+        @include headingGap;
+    }
+
+    &__description {
+        margin-bottom: 26px;
+        font-family: map-get($font-family, italic);
+        font-size: map-get($font-size, mediummore);
+        line-height: map-get($line-height, medium);
+        color: map-get($colors, mineShaft);
+    }
+
+    &__logo {
+        img {
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__graphics {
+        display: flex;
+        align-items: flex-end;
+        width: span(7);
+
+        img {
+            margin-bottom: 0;
+        }
+    }
+}
