@@ -31,6 +31,11 @@ $Features: '.Features';
         position: relative;
         width: span(8);
         height: 624px;
+
+        @include respond-to('increased') {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__image {
@@ -40,11 +45,24 @@ $Features: '.Features';
         height: 100%;
         top: -15px;
         right: -38px;
+
+        @include respond-to('increased') {
+            position: relative;
+            width: 100%;
+            height: auto;
+            top: auto;
+            right: auto;
+        }
     }
 
     &__data {
         width: span(7.1);
         padding-top: 30px;
+
+        @include respond-to('increased') {
+            width: 100%;
+            padding-top: 0;
+        }
     }
 
     &__list,
@@ -61,5 +79,14 @@ $Features: '.Features';
     &__item {
         width: span(7);
         margin-bottom: 54px;
+
+        @include respond-to('medium') {
+            width: 100%;
+            margin-bottom: 30px;
+
+            @include f-last(1) {
+                margin-bottom: 0;
+            }
+        }
     }
 }
