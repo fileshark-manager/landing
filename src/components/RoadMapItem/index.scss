@@ -1,0 +1,63 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$RoadMapItem: '.RoadMapItem';
+
+#{$RoadMapItem} {
+    padding: 30px;
+    background-color: map-get($colors, whiteLilac);
+    border-radius: 4px;
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 8px;
+
+        svg {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__description {
+        opacity: 0.8;
+    }
+
+    &__footer {
+        padding-top: 10px;
+    }
+
+    &__link {
+        position: relative;
+        padding-right: 14px;
+        font-size: map-get($font-size, smaller);
+        color: map-get($colors, persimmon);
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            &::after {
+                right: -2px;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 8px;
+            height: 8px;
+            top: 50%;
+            right: 0;
+            margin-top: -4px;
+            border: 1px solid transparent;
+            border-color: map-get($colors, persimmon) map-get($colors, persimmon) transparent transparent;
+            transform: rotate(45deg);
+            @include transition(right 0.2s ease);
+        }
+    }
+}
