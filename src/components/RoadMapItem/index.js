@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Classnames from 'classnames';
 import './index.scss';
 
 /**
@@ -12,33 +13,40 @@ const RoadMapItem = ({
     title,
     description,
     isDefault
-}) => (
-    <div className="RoadMapItem">
-        <div className="RoadMapItem__wrapper">
-            <div className="RoadMapItem__header">
-                <div className="RoadMapItem__icon">
-                    <Icon />
-                </div>
-            </div>
+}) => {
+    const componentClass = Classnames({
+        RoadMapItem: true,
+        RoadMapItem_default: isDefault
+    });
 
-            <div className="RoadMapItem__content">
-                {!isDefault && (
-                    <div className="RoadMapItem__title">
-                        <h5>{title}</h5>
+    return (
+        <div className={componentClass}>
+            <div className="RoadMapItem__wrapper">
+                <div className="RoadMapItem__header">
+                    <div className="RoadMapItem__icon">
+                        <Icon />
+                    </div>
+                </div>
+
+                <div className="RoadMapItem__content">
+                    {!isDefault && (
+                        <div className="RoadMapItem__title">
+                            <h5>{title}</h5>
+                        </div>
+                    )}
+
+                    <div className="RoadMapItem__description">{description}</div>
+                </div>
+
+                {isDefault && (
+                    <div className="RoadMapItem__footer">
+                        <a href="mailto:somemail@ya.ru" className="RoadMapItem__link">Write suggest</a>
                     </div>
                 )}
-
-                <div className="RoadMapItem__description">{description}</div>
             </div>
-
-            {isDefault && (
-                <div className="RoadMapItem__footer">
-                    <a href="mailto:somemail@ya.ru" className="RoadMapItem__link">Write suggest</a>
-                </div>
-            )}
         </div>
-    </div>
-);
+    );
+};
 
 RoadMapItem.propTypes = {
     Icon: PropTypes.func,

@@ -60,4 +60,9 @@ $RoadMapItem: '.RoadMapItem';
             @include transition(right 0.2s ease);
         }
     }
+
+    &#{$RoadMapItem}_default {
+        background-color: map-get($colors, white);
+        border: 1px solid rgba(map-get($colors, martinique), 0.2);
+    }
 }
