@@ -1,0 +1,96 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$Steps: '.Steps';
+
+#{$Steps} {
+    @include blockPaddingHorizontal;
+    @include blockPaddingVertical('', bottom);
+
+    background-color: map-get($colors, whiteLilac);
+
+    &__wrapper {
+        @include container;
+    }
+
+    &__header {
+        text-align: center;
+
+        @include headingGap;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__graphics {
+        width: span(9.5);
+    }
+
+    &__nav {
+        width: span(6);
+    }
+
+    &__navList,
+    &__navItem {
+        @include list-reset;
+    }
+
+    &__navList {
+        padding-top: 56px;
+        counter-reset: navigation;
+    }
+
+    &__navItem {
+        position: relative;
+        margin-bottom: 68px;
+        padding-left: 75px;
+        cursor: pointer;
+        counter-increment: navigation;
+
+        @include f-last(1) {
+            margin-bottom: 0;
+        }
+
+        &::after {
+            content: counter(navigation);
+            position: absolute;
+            display: block;
+            padding-left: 15px;
+            top: -12px;
+            left: 3px;
+            font-family: map-get($font-family, bold);
+            font-size: map-get($font-size, huge);
+            line-height: map-get($colors, prelittle);
+            color: rgba(map-get($colors, mineShaft), 0.1);
+            border-left: 2px solid transparent;
+        }
+    }
+
+    &__navItem_active {
+        &::after {
+            color: map-get($colors, persimmon);
+            border-color: map-get($colors, persimmon);
+        }
+
+        #{$Steps} {
+            &__navTitle {
+                h3 {
+                    color: map-get($colors, persimmon);
+                }
+            }
+        }
+    }
+
+    &__navButton {
+        font-size: map-get($font-size, smallplus);
+        text-align: left;
+        cursor: pointer;
+    }
+
+    &__navTitle {
+        margin-bottom: 6px;
+    }
+}
