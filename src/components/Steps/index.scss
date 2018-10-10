@@ -7,6 +7,7 @@ $Steps: '.Steps';
     @include blockPaddingHorizontal;
     @include blockPaddingVertical('', bottom);
 
+    position: relative;
     background-color: map-get($colors, whiteLilac);
     overflow: hidden;
 
@@ -27,7 +28,7 @@ $Steps: '.Steps';
     }
 
     &__graphics {
-        width: span(9.5);
+        width: span(10);
 
         @include respond-to('intermediary') {
             width: span(16);
@@ -119,7 +120,7 @@ $Steps: '.Steps';
             position: absolute;
             display: block;
             padding-left: 15px;
-            top: -12px;
+            top: -16px;
             left: 3px;
             font-family: map-get($font-family, bold);
             font-size: map-get($font-size, huge);
@@ -131,6 +132,10 @@ $Steps: '.Steps';
 
     &__navTitle {
         margin-bottom: 6px;
+
+        h3 {
+            color: rgba(map-get($colors, mineShaft), 0.7);
+        }
     }
 
     &__navDescription {
@@ -148,6 +153,19 @@ $Steps: '.Steps';
 
         @include respond-to('intermediary') {
             display: flex;
+        }
+    }
+
+    &__border {
+        position: absolute;
+        display: block;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+
+        svg {
+            display: block;
+            width: 100%;
         }
     }
 }

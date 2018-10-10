@@ -150,6 +150,16 @@ class Steps extends Component {
                             onNext={this.onNext} />
                     </div>
                 </div>
+
+                <div className="Steps__border">
+                    <svg version="1.1" viewBox="0 0 1920 226">
+                        <path
+                            fill="#FFFFFF"
+                            d="M0,89c281.237,67.967,606.978,101.949,977.218,101.949
+                    c370.241,0,684.502-63.596,942.782-190.788V226H0V89z M0,89c281.237,67.967,606.978,101.949,977.218,101.949
+                    c370.241,0,684.502-63.596,942.782-190.788V226H0V89z" />
+                    </svg>
+                </div>
             </section>
         );
     }
