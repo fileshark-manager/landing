@@ -9,7 +9,7 @@ const Footer = () => (
     <footer className="Footer">
         <div className="Footer__wrapper">
             <div className="Footer__copy">
-                &copy; 2018 «divlab»
+                &copy; 2018 «File.Shark»
             </div>
 
             <div className="Footer__nav">
