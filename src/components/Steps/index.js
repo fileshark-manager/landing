@@ -38,10 +38,11 @@ class Steps extends Component {
      */
     onNext() {
         const {currentSlide = 0} = this.state;
+        const newSlide = currentSlide + 1;
 
-        this.slider.slickGoTo(currentSlide);
+        this.slider.slickGoTo(newSlide);
 
-        this.setState({currentSlide: currentSlide + 1});
+        this.setState({currentSlide: newSlide});
     }
 
     /**
@@ -49,10 +50,11 @@ class Steps extends Component {
      */
     onPrev() {
         const {currentSlide = 0} = this.state;
+        const newSlide = currentSlide - 1;
 
-        this.slider.slickGoTo(currentSlide);
+        this.slider.slickGoTo(newSlide);
 
-        this.setState({currentSlide: currentSlide - 1});
+        this.setState({currentSlide: newSlide});
     }
 
     /**

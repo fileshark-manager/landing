@@ -1,4 +1,6 @@
 import step1Image from '../../assets/images/vis-step-1.jpg';
+import step2Image from '../../assets/images/vis-step-2.jpg';
+import step3Image from '../../assets/images/vis-step-3.jpg';
 
 export default [
     {
@@ -9,11 +11,11 @@ export default [
     {
         title: 'Paste the code',
         description: 'You can try free or demo version',
-        image: step1Image
+        image: step2Image
     },
     {
         title: 'Configure the server',
         description: 'You can try free or demo version',
-        image: step1Image
+        image: step3Image
     }
 ];
