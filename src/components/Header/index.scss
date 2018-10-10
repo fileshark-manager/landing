@@ -91,6 +91,11 @@ $Header: '.Header';
         line-height: map-get($line-height, prelittle);
         color: map-get($colors, white);
         text-decoration: none;
+        @include transition(color 0.2s ease);
+
+        &:hover {
+            color: rgba(map-get($colors, white), 0.8);
+        }
     }
 
     &__cta {
