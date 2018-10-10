@@ -41,8 +41,9 @@ $linkButton: 'a.Button';
 
     &#{$Button}_size_small {
         max-width: 104px;
-        padding-top: 0.45em;
-        padding-bottom: 0.45em;
+        padding-top: 0.65em;
+        padding-bottom: 0.65em;
+        font-size: map-get($font-size, smallplus);
     }
 
     &#{$Button}_theme_primary {

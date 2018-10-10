@@ -18,7 +18,7 @@ const Hero = () => (
                         </div>
 
                         <div className="Hero__subtitle">
-                            <h5>Описательный текст для кого? Кастомное решение для управления вашими файлами в админке (в система управления контентом (CMS))</h5>
+                            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</h5>
                         </div>
 
                         <div className="Hero__cta">

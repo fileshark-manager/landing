@@ -102,7 +102,7 @@ $Hero: '.Hero';
     }
 
     &__subtitle {
-        margin-bottom: 78px;
+        margin-bottom: 68px;
 
         @include respond-to('increased') {
             margin-bottom: 45px;

@@ -4,19 +4,7 @@ export default [
         url: '#'
     },
     {
-        title: 'Price',
-        url: '#'
-    },
-    {
         title: 'Documentation',
-        url: '#'
-    },
-    {
-        title: 'About us',
-        url: '#'
-    },
-    {
-        title: 'Contact',
         url: '#'
     }
 ];

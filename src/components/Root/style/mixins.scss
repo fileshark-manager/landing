@@ -197,7 +197,7 @@
         }
     }
     @else if ($type == 'h5') {
-        font-family: map-get($font-family, regular);
+        font-family: map-get($font-family, light);
         font-size: map-get($font-size, default);
         line-height: map-get($line-height, medium);
 
