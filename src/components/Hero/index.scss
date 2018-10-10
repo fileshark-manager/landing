@@ -42,35 +42,31 @@ $Hero: '.Hero';
     &__graphics {
         position: relative;
         width: span(9);
+        height: 502px;
 
         @include respond-to('increased') {
             width: 100%;
+            height: auto;
         }
     }
 
     &__image {
         position: absolute;
-        top: -82px;
+        width: 1016px;
+        height: 502px;
+        top: -32px;
         left: -66px;
 
         @include respond-to('increased') {
             position: relative;
+            width: 100%;
+            height: auto;
             top: auto;
             left: auto;
-            margin-bottom: -64px;
-        }
-
-        @include respond-to('prebig') {
-            margin-bottom: -30px;
         }
 
         img {
-            max-width: none;
             margin-bottom: 0;
-
-            @include respond-to('increased') {
-                max-width: 100%;
-            }
         }
     }
 
