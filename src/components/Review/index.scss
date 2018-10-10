@@ -40,7 +40,7 @@ $Review: '.Review';
         font-family: map-get($font-family, italic);
         font-size: map-get($font-size, mediummore);
         line-height: map-get($line-height, medium);
-        color: map-get($colors, mineShaft);
+        color: rgba(map-get($colors, mineShaft), 0.9);
 
         @include respond-to('increased') {
             font-size: map-get($font-size, premedium);
