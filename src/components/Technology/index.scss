@@ -8,7 +8,7 @@ $Technology: '.Technology';
     flex-wrap: wrap;
     width: 100%;
     padding: 36px 10px;
-    border: 1px solid rgba(map-get($colors, martinique), 0.2);
+    border: 1px solid rgba(map-get($colors, martinique), 0.1);
     background-color: map-get($colors, white);
     border-radius: 4px;
 
@@ -49,6 +49,36 @@ $Technology: '.Technology';
 
         @include respond-to('increased') {
             max-width: 100%;
+        }
+    }
+
+    &#{$Technology}_theme_react {
+        #{$Technology} {
+            &__title {
+                h4 {
+                    color: map-get($colors, turquoise);
+                }
+            }
+        }
+    }
+
+    &#{$Technology}_theme_redux {
+        #{$Technology} {
+            &__title {
+                h4 {
+                    color: map-get($colors, fuchsia);
+                }
+            }
+        }
+    }
+
+    &#{$Technology}_theme_styled {
+        #{$Technology} {
+            &__title {
+                h4 {
+                    color: map-get($colors, brink);
+                }
+            }
         }
     }
 }

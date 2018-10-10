@@ -36,7 +36,7 @@
 // Vertical paddings
 @mixin blockPaddingVertical($top: "", $bottom: "") {
     $padding: (
-        desktop: 80px,
+        desktop: 100px,
         tablet: 50px,
         mobile: 30px
     );
