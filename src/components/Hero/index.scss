@@ -5,12 +5,13 @@ $Hero: '.Hero';
 
 #{$Hero} {
     @include blockPaddingHorizontal;
-    @include blockPaddingVertical;
+    @include blockPaddingVertical('', bottom);
 
     position: relative;
+    padding-top: 60px;
     background-color: map-get($colors, persimmon);
     background-image: url(../../assets/images/bg-hero-left.svg), url(../../assets/images/bg-hero-right.svg);
-    background-position: 46% 0, 94% 0;
+    background-position: 44% 0, calc(44% + 1016px) 0;
     background-repeat: no-repeat, no-repeat;
     overflow: hidden;
 
@@ -33,17 +34,24 @@ $Hero: '.Hero';
     }
 
     &__data {
+        display: flex;
+        align-items: center;
         width: span(7);
-        padding-bottom: 72px;
+        //padding-bottom: 72px;
 
         @include respond-to('increased') {
             width: 100%;
-            padding-bottom: 62px;
+            //padding-bottom: 62px;
         }
 
         @include respond-to('prebig') {
-            padding-bottom: 40px;
+            //padding-bottom: 40px;
         }
+    }
+
+    &__info {
+        display: block;
+        width: 100%;
     }
 
     &__graphics {
@@ -61,7 +69,7 @@ $Hero: '.Hero';
         position: absolute;
         width: 1016px;
         height: 502px;
-        top: -82px;
+        //top: -82px;
         left: -66px;
 
         @include respond-to('increased') {

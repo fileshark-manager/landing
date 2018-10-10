@@ -12,18 +12,20 @@ const Hero = () => (
         <div className="Hero__wrapper">
             <div className="Hero__columns">
                 <div className="Hero__data">
-                    <div className="Hero__title">
-                        <h1>MediaManager for&nbsp;your CMS</h1>
-                    </div>
+                    <div className="Hero__info">
+                        <div className="Hero__title">
+                            <h1>MediaManager for&nbsp;your CMS</h1>
+                        </div>
 
-                    <div className="Hero__subtitle">
-                        <h5>Описательный текст для кого? Кастомное решение для управления вашими файлами в админке (в система управления контентом (CMS))</h5>
-                    </div>
+                        <div className="Hero__subtitle">
+                            <h5>Описательный текст для кого? Кастомное решение для управления вашими файлами в админке (в система управления контентом (CMS))</h5>
+                        </div>
 
-                    <div className="Hero__cta">
-                        <Button
-                            text="Buy"
-                            size="medium" />
+                        <div className="Hero__cta">
+                            <Button
+                                text="Buy"
+                                size="medium" />
+                        </div>
                     </div>
                 </div>
 
