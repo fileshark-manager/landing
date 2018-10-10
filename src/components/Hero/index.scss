@@ -9,7 +9,14 @@ $Hero: '.Hero';
 
     position: relative;
     background-color: map-get($colors, persimmon);
+    background-image: url(../../assets/images/bg-hero-left.svg), url(../../assets/images/bg-hero-right.svg);
+    background-position: 46% 0, 94% 0;
+    background-repeat: no-repeat, no-repeat;
     overflow: hidden;
+
+    @include respond-to('increased') {
+        background: map-get($colors, persimmon);
+    }
 
     &__wrapper {
         @include container;
@@ -54,7 +61,7 @@ $Hero: '.Hero';
         position: absolute;
         width: 1016px;
         height: 502px;
-        top: -32px;
+        top: -82px;
         left: -66px;
 
         @include respond-to('increased') {
