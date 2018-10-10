@@ -36,9 +36,9 @@ const Pagination = ({
             </button>
 
             <div className="Pagination__pos">
-                {current}
+                <div className="Pagination__num">{current}</div>
                 <span>/</span>
-                {total}
+                <div className="Pagination__num">{total}</div>
             </div>
 
             <button type="button" className={nextButtonClass} onClick={onNext}>
