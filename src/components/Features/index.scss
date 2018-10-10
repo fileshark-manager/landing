@@ -5,8 +5,9 @@ $Features: '.Features';
 
 #{$Features} {
     @include blockPaddingHorizontal;
-    @include blockPaddingVertical;
+    @include blockPaddingVertical(top, '');
 
+    padding-bottom: 60px;
     background-color: map-get($colors, white);
     overflow: hidden;
 

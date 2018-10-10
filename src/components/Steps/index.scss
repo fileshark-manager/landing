@@ -133,6 +133,10 @@ $Steps: '.Steps';
         margin-bottom: 6px;
     }
 
+    &__navDescription {
+        font-family: map-get($font-family, light);
+    }
+
     &__cta {
         padding-left: 20px;
     }

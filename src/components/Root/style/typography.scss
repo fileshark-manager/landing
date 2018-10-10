@@ -1,6 +1,6 @@
 body {
     font-weight: 400;
-    font-family: map-get($font-family, regular);
+    font-family: map-get($font-family, light);
     font-size: map-get($font-size, smallplus);
     line-height: map-get($line-height, small);
     color: map-get($colors, mineShaft);
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: map-get($colors, mineShaft);
+    color: rgba(map-get($colors, mineShaft), 0.9);
 }
 
 h1 {
