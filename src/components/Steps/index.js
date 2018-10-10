@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick';
 import Classnames from 'classnames';
+import Button from '../Button';
 import steps from '../../data/steps';
 import './index.scss';
 
@@ -96,6 +97,13 @@ class Steps extends Component {
                                     })
                                 }
                             </ul>
+
+                            <div className="Steps__cta">
+                                <Button
+                                    theme="alert"
+                                    size="medium"
+                                    text="Buy" />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -46,7 +46,7 @@ $linkButton: 'a.Button';
     }
 
     &#{$Button}_theme_primary {
-        border: 1px solid map-get($colors, white);
+        border-color: map-get($colors, white);
         background-color: map-get($colors, white);
 
         &:hover {
@@ -55,15 +55,16 @@ $linkButton: 'a.Button';
         }
     }
 
-    //&#{$Button}_theme_alert {
-    //    border-color: map-get($colors, signal-orange);
-    //    background-color: map-get($colors, signal-orange);
-    //
-    //    &:hover {
-    //        color: map-get($colors, signal-orange);
-    //        background: transparent;
-    //    }
-    //}
+    &#{$Button}_theme_alert {
+        color: map-get($colors, white);
+        border-color: map-get($colors, persimmon);
+        background-color: map-get($colors, persimmon);
+
+        &:hover {
+            color: map-get($colors, persimmon);
+            background: transparent;
+        }
+    }
 
     //&#{$Button}_theme_secondary {
     //    border-color: map-get($colors, activate);

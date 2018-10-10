@@ -27,6 +27,11 @@ $Steps: '.Steps';
 
     &__graphics {
         width: span(9.5);
+        box-shadow: 0 14px 38px rgba(map-get($colors, martinique), 0.12);
+    }
+
+    &__graphicsImage {
+        margin-bottom: 0;
     }
 
     &__nav {
@@ -39,6 +44,7 @@ $Steps: '.Steps';
     }
 
     &__navList {
+        margin-bottom: 66px;
         padding-top: 56px;
         counter-reset: navigation;
     }
@@ -46,13 +52,37 @@ $Steps: '.Steps';
     &__navItem {
         position: relative;
         margin-bottom: 68px;
-        padding-left: 75px;
         cursor: pointer;
         counter-increment: navigation;
 
         @include f-last(1) {
             margin-bottom: 0;
         }
+    }
+
+    &__navItem_active {
+        #{$Steps} {
+            &__navButton {
+                &::after {
+                    color: map-get($colors, persimmon);
+                    border-color: map-get($colors, persimmon);
+                }
+            }
+
+            &__navTitle {
+                h3 {
+                    color: map-get($colors, persimmon);
+                }
+            }
+        }
+    }
+
+    &__navButton {
+        position: relative;
+        padding-left: 75px;
+        font-size: map-get($font-size, smallplus);
+        text-align: left;
+        cursor: pointer;
 
         &::after {
             content: counter(navigation);
@@ -69,28 +99,11 @@ $Steps: '.Steps';
         }
     }
 
-    &__navItem_active {
-        &::after {
-            color: map-get($colors, persimmon);
-            border-color: map-get($colors, persimmon);
-        }
-
-        #{$Steps} {
-            &__navTitle {
-                h3 {
-                    color: map-get($colors, persimmon);
-                }
-            }
-        }
-    }
-
-    &__navButton {
-        font-size: map-get($font-size, smallplus);
-        text-align: left;
-        cursor: pointer;
-    }
-
     &__navTitle {
         margin-bottom: 6px;
+    }
+
+    &__cta {
+        padding-left: 20px;
     }
 }
