@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Slider from 'react-slick';
 import Classnames from 'classnames';
 import Button from '../Button';
+import Pagination from '../Pagination';
 import steps from '../../data/steps';
 import './index.scss';
 
@@ -23,9 +24,35 @@ class Steps extends Component {
     constructor(props) {
         super(props);
 
+        this.onNext = this.onNext.bind(this);
+        this.onPrev = this.onPrev.bind(this);
+        this.onChange = this.onChange.bind(this);
+
         this.state = {
             currentSlide: 0
         };
+    }
+
+    /**
+     * Navigates to next slide
+     */
+    onNext() {
+        const {currentSlide = 0} = this.state;
+
+        this.slider.slickGoTo(currentSlide);
+
+        this.setState({currentSlide: currentSlide + 1});
+    }
+
+    /**
+     * Navigates to prev slide
+     */
+    onPrev() {
+        const {currentSlide = 0} = this.state;
+
+        this.slider.slickGoTo(currentSlide);
+
+        this.setState({currentSlide: currentSlide - 1});
     }
 
     /**
@@ -61,11 +88,17 @@ class Steps extends Component {
                                 ref={(slider) => (this.slider = slider)}>
                                 {
                                     steps.map((step, idx) => {
-                                        const {image = '', title = ''} = step;
+                                        const {image = '', title = '', description = ''} = step;
 
                                         return (
                                             <div key={idx} className="Steps__graphicsItem">
                                                 <img src={image} alt={title} className="Steps__graphicsImage" />
+
+                                                <div className="Steps__navTitle">
+                                                    <h3>{`${idx + 1}. ${title}`}</h3>
+                                                </div>
+
+                                                <div className="Steps__navDescription">{description}</div>
                                             </div>
                                         );
                                     })
@@ -105,6 +138,14 @@ class Steps extends Component {
                                     text="Buy" />
                             </div>
                         </div>
+                    </div>
+
+                    <div className="Steps__footer">
+                        <Pagination
+                            current={currentSlide + 1}
+                            total={steps.length}
+                            onPrev={this.onPrev}
+                            onNext={this.onNext} />
                     </div>
                 </div>
             </section>

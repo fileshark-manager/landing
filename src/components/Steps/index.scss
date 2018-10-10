@@ -8,6 +8,7 @@ $Steps: '.Steps';
     @include blockPaddingVertical('', bottom);
 
     background-color: map-get($colors, whiteLilac);
+    overflow: hidden;
 
     &__wrapper {
         @include container;
@@ -27,7 +28,32 @@ $Steps: '.Steps';
 
     &__graphics {
         width: span(9.5);
-        box-shadow: 0 14px 38px rgba(map-get($colors, martinique), 0.12);
+
+        @include respond-to('intermediary') {
+            width: span(16);
+        }
+    }
+
+    &__graphicsItem {
+        text-align: center;
+
+        #{$Steps} {
+            &__navTitle {
+                display: none;
+
+                @include respond-to('intermediary') {
+                    display: block;
+                }
+            }
+
+            &__navDescription {
+                display: none;
+
+                @include respond-to('intermediary') {
+                    display: block;
+                }
+            }
+        }
     }
 
     &__graphicsImage {
@@ -36,6 +62,10 @@ $Steps: '.Steps';
 
     &__nav {
         width: span(6);
+
+        @include respond-to('intermediary') {
+            display: none;
+        }
     }
 
     &__navList,
@@ -105,5 +135,15 @@ $Steps: '.Steps';
 
     &__cta {
         padding-left: 20px;
+    }
+
+    &__footer {
+        display: none;
+        justify-content: center;
+        padding-top: 50px;
+
+        @include respond-to('intermediary') {
+            display: flex;
+        }
     }
 }
