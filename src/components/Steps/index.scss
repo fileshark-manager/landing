@@ -13,6 +13,9 @@ $Steps: '.Steps';
 
     &__wrapper {
         @include container;
+
+        position: relative;
+        z-index: 1;
     }
 
     &__header {
@@ -25,6 +28,10 @@ $Steps: '.Steps';
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include respond-to('increased') {
+            margin-top: -20px;
+        }
     }
 
     &__graphics {
@@ -85,6 +92,7 @@ $Steps: '.Steps';
         margin-bottom: 68px;
         cursor: pointer;
         counter-increment: navigation;
+        -webkit-tap-highlight-color: transparent;
 
         @include f-last(1) {
             margin-bottom: 0;
@@ -114,6 +122,7 @@ $Steps: '.Steps';
         font-size: map-get($font-size, smallplus);
         text-align: left;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
 
         &::after {
             content: counter(navigation);

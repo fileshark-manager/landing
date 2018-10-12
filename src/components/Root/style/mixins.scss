@@ -4,7 +4,7 @@
 @mixin headingGap {
     margin-bottom: 40px;
 
-    @include respond-to('prebig') {
+    @include respond-to('increased') {
         margin-bottom: 20px;
     }
 }
@@ -83,8 +83,13 @@
 
 // Horizontal paddings
 @mixin blockPaddingHorizontal {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @include respond-to('prebig') {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @function unfoldTransition ($transition) {

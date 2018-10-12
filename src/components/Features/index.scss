@@ -26,6 +26,10 @@ $Features: '.Features';
         flex-wrap: wrap;
         width: 100%;
         justify-content: space-between;
+
+        @include respond-to('increased') {
+            margin-top: -20px;
+        }
     }
 
     &__graphics {
@@ -80,6 +84,12 @@ $Features: '.Features';
     &__item {
         width: span(7);
         margin-bottom: 54px;
+
+        @include respond-to('increased') {
+            @include f-last(2) {
+                margin-bottom: 0;
+            }
+        }
 
         @include respond-to('medium') {
             width: 100%;
