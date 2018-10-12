@@ -96,6 +96,10 @@ $Header: '.Header';
         &:hover {
             color: rgba(map-get($colors, white), 0.8);
         }
+
+        &.active {
+            text-decoration: underline;
+        }
     }
 
     &__cta {
