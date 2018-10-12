@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Classnames from 'classnames';
+import config from '../../config';
 import './index.scss';
+
+const {contactLink = ''} = config;
 
 /**
  * Renders RoadMapItem component
@@ -40,7 +43,7 @@ const RoadMapItem = ({
 
                 {isDefault && (
                     <div className="RoadMapItem__footer">
-                        <a href="mailto:somemail@ya.ru" className="RoadMapItem__link">Write suggest</a>
+                        <a href={contactLink} className="RoadMapItem__link">Write suggest</a>
                     </div>
                 )}
             </div>
