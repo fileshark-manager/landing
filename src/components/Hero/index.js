@@ -1,7 +1,10 @@
 import React from 'react';
 import Button from '../Button';
 import heroImage from '../../assets/images/vis-hero.png';
+// import config from '../../config';
 import './index.scss';
+
+// const {purchaseLink = ''} = config;
 
 /**
  * Renders Hero component
