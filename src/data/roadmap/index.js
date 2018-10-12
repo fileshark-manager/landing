@@ -7,17 +7,17 @@ export default [
     {
         Icon: IconImage,
         title: 'Image processing',
-        description: 'Se hva andre pasienter har sagt om klinikker, leger og spesienter'
+        description: 'Process your images (crop, resize etc.) right in media manager'
     },
     {
         Icon: IconVideo,
-        title: 'Video links',
-        description: 'Se hva andre pasienter har sagt'
+        title: 'Supporting video services',
+        description: 'Save links to useful videos (youtube, vimeo etc.)'
     },
     {
         Icon: IconResponsive,
-        title: 'Adaptive',
-        description: 'Se hva andre pasienter har sagt om klinikker, leger og spesienter'
+        title: 'Responsive',
+        description: 'Responsive versions for small screens'
     },
     {
         Icon: IconBubble,
