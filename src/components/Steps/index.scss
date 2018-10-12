@@ -169,6 +169,7 @@ $Steps: '.Steps';
         display: none;
         justify-content: center;
         padding-top: 50px;
+        padding-bottom: 20px;
 
         @include respond-to('intermediary') {
             display: flex;
