@@ -14,11 +14,11 @@ const Hero = () => (
                 <div className="Hero__data">
                     <div className="Hero__info">
                         <div className="Hero__title">
-                            <h1>MediaManager for&nbsp;your CMS</h1>
+                            <h1>Media manager for&nbsp;your CMS</h1>
                         </div>
 
                         <div className="Hero__subtitle">
-                            <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</h5>
+                            <h5>Custom interface solution for file management in your content management system.</h5>
                         </div>
 
                         <div className="Hero__cta">
