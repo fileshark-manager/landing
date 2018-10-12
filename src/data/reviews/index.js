@@ -10,21 +10,21 @@ export default [
     {
         preview: slide1,
         title: 'Comments',
-        description: 'MediaManager for your CMS is the most useful resource I\'ve come across since I made my career change to freelance writing.',
+        description: 'I have custom CMS solution with default media manager with very poor functionality. That\'s why I decided to use File.Shark. It saved my life!',
         logo: logo1,
         name: 'Naturalsleep'
     },
     {
         preview: slide2,
         title: 'Comments',
-        description: 'MediaManager for your CMS is the most useful resource I\'ve come across since I made my career change to freelance writing.',
+        description: 'My team develops our own content management system and we needed a media manager. The functionality of File.Shark is more than enough for us.',
         logo: logo2,
         name: 'Fanbook'
     },
     {
         preview: slide3,
         title: 'Comments',
-        description: 'MediaManager for your CMS is the most useful resource I\'ve come across since I made my career change to freelance writing.',
+        description: 'The convenient and fast interface of this media manager allowed me to do my work faster and more comfortable.',
         logo: logo3,
         name: 'ShopTechnology'
     }
