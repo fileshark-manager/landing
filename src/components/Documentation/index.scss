@@ -1,0 +1,43 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$Documentation: '.Documentation';
+
+#{$Documentation} {
+    @include blockPaddingHorizontal;
+    @include blockPaddingVertical;
+
+    h1 {
+        font-size: map-get($font-size, aftersemilarge);
+    }
+
+    h2 {
+        font-size: map-get($font-size, medium);
+    }
+
+    h3 {
+        font-size: map-get($font-size, premedium);
+    }
+
+    h4 {
+        font-size: map-get($font-size, predefault);
+    }
+
+    &__wrapper {
+        @include container;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__aside {
+        width: span(4);
+    }
+
+    &__main {
+        width: span(12);
+    }
+}
