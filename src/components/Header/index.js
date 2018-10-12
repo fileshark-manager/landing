@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-static';
 import Button from '../Button';
 import Logo from '../Logo';
 import Burger from '../Burger';
@@ -17,7 +18,9 @@ const Header = () => (
         <div className="Header__container">
             <div className="Header__wrapper">
                 <div className="Header__logo">
-                    <Logo />
+                    <Link exact to="/">
+                        <Logo />
+                    </Link>
                 </div>
 
                 <div className="Header__content">
@@ -29,7 +32,7 @@ const Header = () => (
 
                                     return (
                                         <li key={idx} className="Header__item">
-                                            <a href={url} className="Header__link">{title}</a>
+                                            <Link to={url} className="Header__link">{title}</Link>
                                         </li>
                                     );
                                 })

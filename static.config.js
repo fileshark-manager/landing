@@ -25,6 +25,10 @@ export default {
         {
             path: '/',
             component: 'src/pages/Home',
+        },
+        {
+            path: '/documentation',
+            component: 'src/pages/Documentation',
         }
         // {
         //     path: '/about',

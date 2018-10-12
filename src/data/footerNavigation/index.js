@@ -5,6 +5,6 @@ export default [
     },
     {
         title: 'Documentation',
-        url: '#'
+        url: '/documentation'
     }
 ];

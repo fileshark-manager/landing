@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-static';
 import links from '../../data/footerNavigation';
 import './index.scss';
 
@@ -20,7 +21,7 @@ const Footer = () => (
 
                             return (
                                 <li key={idx} className="Footer__item">
-                                    <a href={url} className="Footer__link">{title}</a>
+                                    <Link to={url} className="Footer__link">{title}</Link>
                                 </li>
                             );
                         })
