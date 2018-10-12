@@ -6,19 +6,19 @@ export default [
     {
         Icon: IconReact,
         title: 'React',
-        description: 'Se hva andre pasienter har sagt om klinikker, leger og spesienter',
+        description: 'React makes it painless to create interactive UIs',
         theme: 'react'
     },
     {
         Icon: IconRedux,
         title: 'Redux',
-        description: 'Se hva andre pasienter har sagt om klinikker, leger og spesienter',
+        description: 'Redux helps you write applications that behave consistently and are easy to test',
         theme: 'redux'
     },
     {
         Icon: IconStyled,
         title: 'Styled-components',
-        description: 'Se hva andre pasienter har sagt om klinikker, leger og spesienter',
+        description: 'Styled-components helps to use the best bits of ES6 and CSS to style apps without stress',
         theme: 'styled'
     }
 ];
