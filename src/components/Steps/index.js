@@ -4,7 +4,10 @@ import Classnames from 'classnames';
 import Button from '../Button';
 import Pagination from '../Pagination';
 import steps from '../../data/steps';
+import config from '../../config';
 import './index.scss';
+
+const {purchaseLink = ''} = config;
 
 const sliderSettings = {
     adaptiveHeight: true,
@@ -169,6 +172,7 @@ class Steps extends Component {
 
                             <div className="Steps__cta">
                                 <Button
+                                    href={purchaseLink}
                                     theme="alert"
                                     size="medium"
                                     text="Buy" />

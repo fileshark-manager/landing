@@ -3,7 +3,10 @@ import Button from '../Button';
 import Logo from '../Logo';
 import Burger from '../Burger';
 import links from '../../data/headerNavigation';
+import config from '../../config';
 import './index.scss';
+
+const {purchaseLink = ''} = config;
 
 /**
  * Renders Header component
@@ -36,6 +39,7 @@ const Header = () => (
 
                     <div className="Header__cta">
                         <Button
+                            href={purchaseLink}
                             text="Buy"
                             size="small" />
                     </div>

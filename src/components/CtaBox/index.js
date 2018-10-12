@@ -1,6 +1,9 @@
 import React from 'react';
 import Button from '../Button';
+import config from '../../config';
 import './index.scss';
+
+const {purchaseLink = ''} = config;
 
 /**
  * Renders CtaBox component
@@ -15,7 +18,7 @@ const CtaBox = () => (
 
             <div className="CtaBox__content">
                 <Button
-                    href="#"
+                    href={purchaseLink}
                     text="Buy"
                     size="medium" />
             </div>

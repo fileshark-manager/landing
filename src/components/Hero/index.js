@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from '../Button';
 import heroImage from '../../assets/images/vis-hero.png';
-// import config from '../../config';
+import config from '../../config';
 import './index.scss';
 
-// const {purchaseLink = ''} = config;
+const {purchaseLink = ''} = config;
 
 /**
  * Renders Hero component
@@ -26,6 +26,7 @@ const Hero = () => (
 
                         <div className="Hero__cta">
                             <Button
+                                href={purchaseLink}
                                 text="Buy"
                                 size="medium" />
                         </div>

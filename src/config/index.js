@@ -1,3 +1,3 @@
 export default {
-    purchaseLink: ''
+    purchaseLink: 'http://ya.ru'
 };
