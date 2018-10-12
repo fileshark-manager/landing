@@ -7,21 +7,21 @@ export default [
     {
         Icon: iconUpload,
         title: 'Upload files',
-        description: 'Direkte bestilling rett till klinikken uten tillagte kosnader'
+        description: 'You can upload more than 70 file types'
     },
     {
         Icon: iconFolder,
         title: 'Create folders',
-        description: 'Finn spesialisten med kompetansen og fasilitetene du trenger for din behandling'
+        description: 'Group your files and manage it in the easiest way'
     },
     {
         Icon: iconText,
         title: 'Make descriptions',
-        description: 'Se hva andre pasienter har sagt om klinikker, leger og spesienter'
+        description: 'Create unique descriptions for files and folders'
     },
     {
         Icon: iconFilter,
         title: 'Filters',
-        description: 'Finn en klinikk ner deg eller langt vekk'
+        description: 'Find your files quickly by date or file extension'
     }
 ];
