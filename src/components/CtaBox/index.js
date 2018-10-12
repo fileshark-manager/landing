@@ -10,7 +10,7 @@ const CtaBox = () => (
     <section className="CtaBox">
         <div className="CtaBox__wrapper">
             <div className="CtaBox__header">
-                <h2>MediaManager for your CMS</h2>
+                <h2>Media manager for your CMS</h2>
             </div>
 
             <div className="CtaBox__content">
