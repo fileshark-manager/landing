@@ -91,7 +91,7 @@ $Hero: '.Hero';
     }
 
     &__title {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
 
         @include respond-to('increased') {
             text-align: center;
@@ -115,6 +115,7 @@ $Hero: '.Hero';
         }
 
         h5 {
+            font-size: map-get($font-size, medium);
             color: rgba(map-get($colors, white), 0.8);
         }
     }
