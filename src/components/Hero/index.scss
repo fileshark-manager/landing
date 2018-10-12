@@ -41,11 +41,10 @@ $Hero: '.Hero';
 
         @include respond-to('increased') {
             width: 100%;
-            //padding-bottom: 62px;
         }
 
         @include respond-to('prebig') {
-            //padding-bottom: 40px;
+            padding-bottom: 40px;
         }
     }
 
@@ -62,6 +61,12 @@ $Hero: '.Hero';
         @include respond-to('increased') {
             width: 100%;
             height: auto;
+        }
+
+        @include respond-to('prebig') {
+            width: auto;
+            margin-left: -45px;
+            margin-right: -45px;
         }
     }
 

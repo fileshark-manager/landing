@@ -64,6 +64,16 @@ $Steps: '.Steps';
         }
     }
 
+    &__graphicsItem_active {
+        #{$Steps} {
+            &__navTitle {
+                h3 {
+                    color: map-get($colors, mineShaft);
+                }
+            }
+        }
+    }
+
     &__graphicsImage {
         margin-bottom: 0;
     }

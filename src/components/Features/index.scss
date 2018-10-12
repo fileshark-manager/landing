@@ -11,6 +11,10 @@ $Features: '.Features';
     background-color: map-get($colors, white);
     overflow: hidden;
 
+    @include respond-to('prebig') {
+        padding-bottom: 30px;
+    }
+
     &__wrapper {
         @include container;
     }
@@ -94,6 +98,10 @@ $Features: '.Features';
         @include respond-to('medium') {
             width: 100%;
             margin-bottom: 30px;
+
+            @include f-last(2) {
+                margin-bottom: 30px;
+            }
 
             @include f-last(1) {
                 margin-bottom: 0;

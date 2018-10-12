@@ -91,9 +91,13 @@ class Steps extends Component {
                                 {
                                     steps.map((step, idx) => {
                                         const {image = '', title = '', description = ''} = step;
+                                        const itemClass = Classnames({
+                                            Steps__graphicsItem: true,
+                                            Steps__graphicsItem_active: currentSlide === idx
+                                        });
 
                                         return (
-                                            <div key={idx} className="Steps__graphicsItem">
+                                            <div key={idx} className={itemClass}>
                                                 <img src={image} alt={title} className="Steps__graphicsImage" />
 
                                                 <div className="Steps__navTitle">
