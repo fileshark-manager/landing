@@ -27,9 +27,11 @@ class Steps extends Component {
         this.onNext = this.onNext.bind(this);
         this.onPrev = this.onPrev.bind(this);
         this.onChange = this.onChange.bind(this);
+        this.onAfterChange = this.onAfterChange.bind(this);
 
         this.state = {
-            currentSlide: 0
+            currentSlide: 0,
+            sliding: false
         };
     }
 
@@ -37,24 +39,34 @@ class Steps extends Component {
      * Navigates to next slide
      */
     onNext() {
-        const {currentSlide = 0} = this.state;
+        const {currentSlide = 0, sliding = false} = this.state;
+
+        if (sliding) {
+            return;
+        }
+
         const newSlide = currentSlide + 1;
 
         this.slider.slickGoTo(newSlide);
 
-        this.setState({currentSlide: newSlide});
+        this.setState({currentSlide: newSlide, sliding: true});
     }
 
     /**
      * Navigates to prev slide
      */
     onPrev() {
-        const {currentSlide = 0} = this.state;
+        const {currentSlide = 0, sliding = false} = this.state;
+
+        if (sliding) {
+            return;
+        }
+
         const newSlide = currentSlide - 1;
 
         this.slider.slickGoTo(newSlide);
 
-        this.setState({currentSlide: newSlide});
+        this.setState({currentSlide: newSlide, sliding: true});
     }
 
     /**
@@ -62,9 +74,26 @@ class Steps extends Component {
      * @param {Number} currentSlide
      */
     onChange(currentSlide = 0) {
+        const {sliding = false} = this.state;
+
+        if (currentSlide === this.state.currentSlide) {
+            return;
+        }
+
+        if (sliding) {
+            return;
+        }
+
         this.slider.slickGoTo(currentSlide);
 
-        this.setState({currentSlide});
+        this.setState({currentSlide, sliding: true});
+    }
+
+    /**
+     * Handles afterChange event
+     */
+    onAfterChange() {
+        this.setState({sliding: false});
     }
 
     /**
@@ -87,6 +116,7 @@ class Steps extends Component {
                         <div className="Steps__graphics">
                             <Slider
                                 {...sliderSettings}
+                                afterChange={this.onAfterChange}
                                 ref={(slider) => (this.slider = slider)}>
                                 {
                                     steps.map((step, idx) => {
