@@ -60,9 +60,15 @@ $Documentation: '.Documentation';
     }
 
     &__aside {
+        position: relative;
         width: span(4);
         padding-top: 40px;
         box-shadow: 17px 0 17px -17px rgba(map-get($colors, martinique), 0.2);
+    }
+
+    &__panel {
+        position: fixed;
+        max-width: 200px;
     }
 
     &__title {

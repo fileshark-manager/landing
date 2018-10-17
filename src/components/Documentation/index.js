@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-static';
 import DocumentationSection from '../DocumentationSection';
 import DocumentationCode from '../DocumentationCode';
 import DocumentationInfo from '../DocumentationInfo';
@@ -13,36 +14,38 @@ const Documentation = () => (
         <div className="Documentation__wrapper">
             <div className="Documentation__content">
                 <div className="Documentation__aside">
-                    <div className="Documentation__title">
-                        <h2>Documentation</h2>
-                    </div>
+                    <div className="Documentation__panel">
+                        <div className="Documentation__title">
+                            <h2>Documentation</h2>
+                        </div>
 
-                    <div className="Documentation__content">
-                        <ul className="Documentation__list">
-                            <li className="Documentation__item">
-                                <a href="#getting-started">
-                                    <h4>Getting Started</h4>
-                                </a>
-                            </li>
+                        <div className="Documentation__content">
+                            <ul className="Documentation__list">
+                                <li className="Documentation__item">
+                                    <Link to="#getting-started" className="Documentation__link">
+                                        <h4>Getting Started</h4>
+                                    </Link>
+                                </li>
 
-                            <li className="Documentation__item">
-                                <a href="#setup">
-                                    <h4>Setup</h4>
-                                </a>
-                            </li>
+                                <li className="Documentation__item">
+                                    <Link to="#setup">
+                                        <h4>Setup</h4>
+                                    </Link>
+                                </li>
 
-                            <li className="Documentation__item">
-                                <a href="#usage">
-                                    <h4>Usage</h4>
-                                </a>
-                            </li>
+                                <li className="Documentation__item">
+                                    <Link to="#usage">
+                                        <h4>Usage</h4>
+                                    </Link>
+                                </li>
 
-                            <li className="Documentation__item">
-                                <a href="#server">
-                                    <h4>Server</h4>
-                                </a>
-                            </li>
-                        </ul>
+                                <li className="Documentation__item">
+                                    <Link to="#server">
+                                        <h4>Server</h4>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -187,7 +190,7 @@ const Documentation = () => (
                         <p>File insertion functionality will not be available if <strong>onInsertFile</strong> callback function is not defined.</p>
                     </DocumentationSection>
 
-                    <DocumentationSection>
+                    <DocumentationSection id="server">
                         <h1>Server</h1>
 
                     </DocumentationSection>
