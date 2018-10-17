@@ -1,0 +1,9 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$DocumentationCode: '.DocumentationCode';
+
+#{$DocumentationCode} {
+    border-radius: 3px;
+    overflow: hidden;
+}

@@ -5,9 +5,12 @@ $Documentation: '.Documentation';
 
 #{$Documentation} {
     @include blockPaddingHorizontal;
-    @include blockPaddingVertical;
+
+    font-family: map-get($font-family, regular);
+    font-size: map-get($font-size, default);
 
     h1 {
+        margin-bottom: 0.5em;
         font-size: map-get($font-size, aftersemilarge);
     }
 
@@ -23,6 +26,28 @@ $Documentation: '.Documentation';
         font-size: map-get($font-size, predefault);
     }
 
+    p,
+    ul,
+    ol,
+    pre {
+        margin-bottom: 1.5em;
+
+        @include f-last(1) {
+            margin-bottom: 0;
+        }
+    }
+
+    ul,
+    ol {
+        li {
+            margin-bottom: 0.3em;
+
+            @include f-last(1) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     &__wrapper {
         @include container;
     }
@@ -35,9 +60,35 @@ $Documentation: '.Documentation';
 
     &__aside {
         width: span(4);
+        padding-top: 40px;
+        box-shadow: 17px 0 17px -17px rgba(map-get($colors, martinique), 0.2);
+    }
+
+    &__title {
+        margin-bottom: 1.6em;
+    }
+
+    &__list,
+    &__item {
+        @include list-reset;
+    }
+
+    &__list {
+        li {
+            margin-bottom: 1em !important;
+
+            @include f-last(1) {
+                margin-bottom: 0 !important;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
     }
 
     &__main {
-        width: span(12);
+        width: span(11.55);
+        padding-top: 54px;
     }
 }

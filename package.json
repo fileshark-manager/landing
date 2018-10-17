@@ -17,6 +17,7 @@
         "axios": "^0.16.2",
         "classnames": "^2.2.6",
         "lodash": "^4.17.11",
+        "mdx-deck-code-surfer": "^0.5.3",
         "normalize-scss": "^7.0.1",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
@@ -24,6 +25,7 @@
         "react-router": "^4.2.0",
         "react-slick": "^0.23.1",
         "react-static": "^5.9.8",
+        "react-syntax-highlighter": "^9.0.0",
         "recompose": "^0.30.0",
         "slick-carousel": "^1.8.1",
         "susy": "^2.2.12"
@@ -45,6 +47,7 @@
         "node-sass": "^4.7.2",
         "postcss-import": "^12.0.0",
         "postcss-loader": "^3.0.0",
+        "raw-loader": "^0.5.1",
         "require-dir": "^1.1.0",
         "run-sequence": "^2.2.1",
         "sass-loader": "^6.0.6",

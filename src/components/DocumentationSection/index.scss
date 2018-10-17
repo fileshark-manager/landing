@@ -1,0 +1,15 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$DocumentationSection: '.DocumentationSection';
+
+#{$DocumentationSection} {
+    margin-bottom: 3em;
+    padding-bottom: 2.4em;
+    border-bottom: 1px solid rgba(map-get($colors, black), 0.05);
+
+    @include f-last(1) {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+}
