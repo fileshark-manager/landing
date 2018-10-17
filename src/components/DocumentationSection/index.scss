@@ -4,6 +4,7 @@
 $DocumentationSection: '.DocumentationSection';
 
 #{$DocumentationSection} {
+    position: relative;
     margin-bottom: 3em;
     padding-bottom: 2.4em;
     border-bottom: 1px solid rgba(map-get($colors, black), 0.05);
@@ -11,5 +12,10 @@ $DocumentationSection: '.DocumentationSection';
     @include f-last(1) {
         margin-bottom: 0;
         border-bottom: none;
+    }
+
+    &__anchor {
+        position: absolute;
+        top: ($headerHeight + 30px) * (-1);
     }
 }

@@ -11,7 +11,9 @@ const DocumentationSection = ({
     id,
     children
 }) => (
-    <div id={id} className="DocumentationSection">
+    <div className="DocumentationSection">
+        <div id={id} className="DocumentationSection__anchor" />
+
         {children}
     </div>
 );

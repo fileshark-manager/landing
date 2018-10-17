@@ -186,6 +186,11 @@ const Documentation = () => (
 
                         <p>File insertion functionality will not be available if <strong>onInsertFile</strong> callback function is not defined.</p>
                     </DocumentationSection>
+
+                    <DocumentationSection>
+                        <h1>Server</h1>
+
+                    </DocumentationSection>
                 </div>
             </div>
         </div>
