@@ -1,0 +1,29 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$DocumentationInfo: '.DocumentationInfo';
+
+#{$DocumentationInfo} {
+    &__header {
+        margin-bottom: 10px;
+        font-family: map-get($font-family, semibold);
+        font-size: map-get($font-size, predefault);
+        line-height: map-get($line-height, prelittle);
+        color: map-get($colors, mineShaft);
+    }
+
+    &__content {
+        padding: 20px 25px;
+        background: rgba(map-get($colors, martinique), 0.03);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    &__item {
+        margin-bottom: 5px;
+
+        @include f-last(1) {
+            margin-bottom: 0;
+        }
+    }
+}

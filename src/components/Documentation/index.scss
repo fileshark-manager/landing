@@ -7,7 +7,7 @@ $Documentation: '.Documentation';
     @include blockPaddingHorizontal;
 
     font-family: map-get($font-family, regular);
-    font-size: map-get($font-size, default);
+    font-size: map-get($font-size, smallplus);
 
     h1 {
         margin-bottom: 0.5em;
@@ -29,7 +29,8 @@ $Documentation: '.Documentation';
     p,
     ul,
     ol,
-    pre {
+    pre,
+    .DocumentationInfo {
         margin-bottom: 1.5em;
 
         @include f-last(1) {
