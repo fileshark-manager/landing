@@ -8,6 +8,7 @@ $Documentation: '.Documentation';
 
     font-family: map-get($font-family, regular);
     font-size: map-get($font-size, smallplus);
+    line-height: map-get($line-height, large);
 
     h1 {
         margin-bottom: 0.5em;
@@ -24,6 +25,7 @@ $Documentation: '.Documentation';
     }
 
     h4 {
+        margin-bottom: 0.3em;
         font-size: map-get($font-size, predefault);
     }
 
@@ -31,7 +33,8 @@ $Documentation: '.Documentation';
     ul,
     ol,
     pre,
-    .DocumentationInfo {
+    .DocumentationInfo,
+    .DocumentationTable {
         margin-bottom: 1.5em;
 
         @include f-last(1) {

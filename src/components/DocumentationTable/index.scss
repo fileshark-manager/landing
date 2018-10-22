@@ -1,0 +1,62 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$DocumentationTable: '.DocumentationTable';
+
+#{$DocumentationTable} {
+    border: 1px solid rgba(map-get($colors, regentGray), 0.23);
+    border-radius: 3px;
+    overflow: hidden;
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    tr {
+        @include f-last(1) {
+            th,
+            td {
+                border-bottom: none;
+            }
+        }
+    }
+
+    th,
+    td {
+        border-left: 1px solid rgba(map-get($colors, regentGray), 0.23);
+        border-bottom: 1px solid rgba(map-get($colors, regentGray), 0.23);
+
+        @include f-first(1) {
+            width: 200px;
+            border-left: none;
+        }
+    }
+
+    th {
+        padding: 20px;
+        font-family: map-get($font-family, bold);
+        font-size: map-get($font-size, small);
+        line-height: map-get($line-height, prelittle);
+        color: rgba(map-get($colors, mineShaft), 0.9);
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    td {
+        padding: 24px 20px;
+        font-family: map-get($font-family, regular);
+        font-size: map-get($font-size, predefault);
+        line-height: map-get($line-height, little);
+        color: map-get($colors, mineShaft);
+        text-align: left;
+
+        @include f-first(1) {
+            font-family: map-get($font-family, semibold);
+        }
+
+        p {
+            margin-bottom: 0.4em;
+        }
+    }
+}
