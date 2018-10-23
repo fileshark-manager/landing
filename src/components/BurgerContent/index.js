@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-static';
 import Button from '../Button';
 import links from '../../data/headerNavigation';
 import './index.scss';
@@ -18,7 +19,7 @@ const BurgerContent = () => (
 
                             return (
                                 <li key={idx} className="BurgerContent__item">
-                                    <a href={url} className="BurgerContent__link">{title}</a>
+                                    <Link to={url} className="BurgerContent__link">{title}</Link>
                                 </li>
                             );
                         })
