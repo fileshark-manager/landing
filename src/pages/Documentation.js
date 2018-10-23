@@ -8,7 +8,7 @@ import DocumentationComponent from '../components/Documentation';
  * @returns {JSX}
  */
 const Documentation = () => (
-    <Layout>
+    <Layout title="File.Shark Media manager - Documentation">
         <DocumentationComponent />
     </Layout>
 );
