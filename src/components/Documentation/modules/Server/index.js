@@ -577,6 +577,171 @@ const Server = () => (
                 </td>
             </tr>
         </DocumentationTable>
+
+        <br />
+        <br />
+
+        <h4>
+            <ul>
+                <li>PUT /yourFileEndpoint - edit file</li>
+            </ul>
+        </h4>
+
+        <p>Request parameters:</p>
+
+        <DocumentationTable>
+            <tr>
+                <th>Param</th>
+                <th>Type and Description</th>
+            </tr>
+
+            <tr>
+                <td>title</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file title</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>description</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file description</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>alt</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file alt text</p>
+                </td>
+            </tr>
+        </DocumentationTable>
+
+        <p>Expected response:</p>
+
+        <DocumentationCode>
+            {
+                `
+    {
+        alt: "",
+        created: "15.10.2018",
+        description: "",
+        dimensions: "1200x900",
+        extension: "webp",
+        filename: "s1.webp",
+        folder: "7f55583d-d42f-4bc3-9853-7f64b93f3c76",
+        id: "af638588-2e61-4005-915b-f7a6eb22d3b7",
+        size: "214.59 KB",
+        title: "s1.webp",
+        url: "http://localhost:3500/assets/images/af638588-2e61-4005-915b-f7a6eb22d3b7/file/s1.webp"
+    }
+
+                `
+            }
+        </DocumentationCode>
+
+        <DocumentationTable>
+            <tr>
+                <th>Param</th>
+                <th>Type and Description</th>
+            </tr>
+
+            <tr>
+                <td>alt</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: alt text if the file is image</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>created</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file creation date</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>description</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file description</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>dimensions</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file dimensions if the file is image</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>extension</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file extension</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>filename</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: real filename</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>folder</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: the id of the folder in which the file was uploaded</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>id</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file id</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>size</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file size</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>title</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file title</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>url</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file url</p>
+                </td>
+            </tr>
+        </DocumentationTable>
+
+        <br />
+        <br />
+
+
     </DocumentationSection>
 );
 
