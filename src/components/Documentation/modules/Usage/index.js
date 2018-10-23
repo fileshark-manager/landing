@@ -1,7 +1,7 @@
 import React from 'react';
 import DocumentationSection from '../../../DocumentationSection';
 import DocumentationCode from '../../../DocumentationCode';
-import DocumentationInfo from '../../../DocumentationInfo';
+import DocumentationTable from '../../../DocumentationTable';
 
 /**
  * Renders Usage component
@@ -32,97 +32,165 @@ new Fileshark({
             }
         </DocumentationCode>
 
-        <DocumentationInfo
-            title="root"
-            type="HTMLElement"
-            description="Media manager code will be inserted into this html element." />
+        <DocumentationTable>
+            <tr>
+                <th>Param</th>
+                <th>Type and Description</th>
+            </tr>
 
-        <DocumentationInfo
-            title="host"
-            type="String"
-            description="Host address for queries." />
+            <tr>
+                <td>root</td>
+                <td>
+                    <p>Type: HTMLElement</p>
+                    <p>Description: Media manager code will be inserted into this html element.</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="endpoints"
-            type="Object"
-            description="Object with properties where each property is an endpoint url." />
+            <tr>
+                <td>host</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: Host address for queries.</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="endpoints.folder"
-            type="String"
-            description="Endpoint for working with folders." />
+            <tr>
+                <td>endpoints</td>
+                <td>
+                    <p>Type: Object</p>
+                    <p>Description: Object with properties where each property is an endpoint url.</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="endpoints.file"
-            type="String"
-            description="Endpoint for working with files." />
+            <tr>
+                <td>endpoints.folder</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: Endpoint for working with folders.</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="headers"
-            type="Object"
-            description="Used to send custom headers to the server." />
+            <tr>
+                <td>endpoints.file</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: Endpoint for working with files.</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="onInsertFile"
-            type="Function"
-            description="Callback function needed to insert media file into the post. Since our product is not designed for any particular CMS, you need to determine the way to add a file into the post by yourself." />
+            <tr>
+                <td>headers</td>
+                <td>
+                    <p>Type: Object</p>
+                    <p>Description: Used to send custom headers to the server.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>onInsertFile</td>
+                <td>
+                    <p>Type: Function</p>
+                    <p>Description: Callback function needed to insert media file into the post. Since our product is not designed for any particular CMS, you need to determine the way to add a file into the post by yourself.</p>
+                </td>
+            </tr>
+        </DocumentationTable>
 
         <p><strong>onInsertFile</strong> function receives the object with data about current selected file. This object contains the following properties:</p>
 
-        <DocumentationInfo
-            title="id"
-            type="String"
-            description="File id." />
+        <DocumentationTable>
+            <tr>
+                <th>Param</th>
+                <th>Type and Description</th>
+            </tr>
 
-        <DocumentationInfo
-            title="title"
-            type="String"
-            description="File title." />
+            <tr>
+                <td>id</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file id</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="url"
-            type="String"
-            description="File url." />
+            <tr>
+                <td>title</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file title</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="description"
-            type="String"
-            description="File description." />
+            <tr>
+                <td>url</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file url</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="alt"
-            type="String"
-            description="File alt text." />
+            <tr>
+                <td>description</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file description</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="created"
-            type="String"
-            description="File creation date." />
+            <tr>
+                <td>alt</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file alt text</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="dimensions"
-            type="String"
-            description="File dimensions." />
+            <tr>
+                <td>created</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file creation date</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="extension"
-            type="String"
-            description="File extension." />
+            <tr>
+                <td>dimensions</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file dimensions</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="size"
-            type="String"
-            description="File size." />
+            <tr>
+                <td>extension</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file extension</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="folder"
-            type="String"
-            description="Id of the folder to which the file belongs." />
+            <tr>
+                <td>size</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: file size</p>
+                </td>
+            </tr>
 
-        <DocumentationInfo
-            title="filename"
-            type="String"
-            description="Real filename." />
+            <tr>
+                <td>folder</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: id of the folder to which the file belongs</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>filename</td>
+                <td>
+                    <p>Type: String</p>
+                    <p>Description: real filename</p>
+                </td>
+            </tr>
+        </DocumentationTable>
 
         <p>File insertion functionality will not be available if <strong>onInsertFile</strong> callback function is not defined.</p>
     </DocumentationSection>
