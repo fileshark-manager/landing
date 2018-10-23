@@ -18,6 +18,8 @@ const FONTS = [
 const fontLoader = generateFontConfig({PATHS, FONTS}); // Dynamic generation of rules for fonts
 
 export default {
+    siteRoot: 'https://fileshark-manager.github.io',
+    basePath: 'landing',
     getSiteData: () => ({
         title: 'React Static',
     }),
@@ -30,28 +32,6 @@ export default {
             path: '/documentation',
             component: 'src/pages/Documentation',
         }
-        // {
-        //     path: '/about',
-        //     component: 'src/containers/About',
-        // },
-        // {
-        //     path: '/blog',
-        //     component: 'src/containers/Blog',
-        //     getData: () => ({
-        //         posts,
-        //     }),
-        //     children: posts.map(post => ({
-        //         path: `/post/${post.id}`,
-        //         component: 'src/containers/Post',
-        //         getData: () => ({
-        //             post,
-        //         }),
-        //     })),
-        // },
-        // {
-        //     is404: true,
-        //     component: 'src/containers/404',
-        // },
     ]),
     webpack: (config, {defaultLoaders, stage}) => {
         let loaders = [];
