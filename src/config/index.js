@@ -49,5 +49,5 @@ Other information %0D%0A
 
 export default {
     purchaseLink: 'http://ya.ru',
-    contactLink: `mailto:help@ya.ru?subject=${subject}&body=${body}`
+    contactLink: `mailto:fileshark.mm@gmail.com?subject=${subject}&body=${body}`
 };
