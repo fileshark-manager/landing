@@ -68,6 +68,10 @@ $Documentation: '.Documentation';
         width: span(4);
         padding-top: 40px;
         box-shadow: 17px 0 17px -17px rgba(map-get($colors, martinique), 0.2);
+
+        @include respond-to('increased') {
+            display: none;
+        }
     }
 
     &__panel {
@@ -105,5 +109,9 @@ $Documentation: '.Documentation';
     &__main {
         width: span(11.55);
         padding-top: 54px;
+
+        @include respond-to('increased') {
+            width: span(16);
+        }
     }
 }
