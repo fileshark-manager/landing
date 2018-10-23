@@ -159,6 +159,7 @@ $Steps: '.Steps';
 
     &__navDescription {
         font-family: map-get($font-family, light);
+        line-height: map-get($line-height, small);
     }
 
     &__cta {

@@ -137,7 +137,7 @@ class Steps extends Component {
                                                     <h3>{`${idx + 1}. ${title}`}</h3>
                                                 </div>
 
-                                                <div className="Steps__navDescription">{description}</div>
+                                                <div className="Steps__navDescription" dangerouslySetInnerHTML={{__html: description}} />
                                             </div>
                                         );
                                     })
@@ -162,7 +162,7 @@ class Steps extends Component {
                                                         <h3>{title}</h3>
                                                     </div>
 
-                                                    <div className="Steps__navDescription">{description}</div>
+                                                    <div className="Steps__navDescription" dangerouslySetInnerHTML={{__html: description}} />
                                                 </button>
                                             </li>
                                         );

@@ -4,18 +4,18 @@ import step3Image from '../../assets/images/vis-step-3.jpg';
 
 export default [
     {
-        title: 'Download MediaManager ',
-        description: 'You can try free or demo version',
+        title: 'Download archive with files ',
+        description: 'In this archive you will find all the necessary HTML and JS files',
         image: step1Image
     },
     {
-        title: 'Paste the code',
-        description: 'You can try free or demo version',
+        title: 'Include all required files',
+        description: 'Include the <strong>main.js</strong> file into your page',
         image: step2Image
     },
     {
-        title: 'Configure the server',
-        description: 'You can try free or demo version',
+        title: 'Initiate media manager',
+        description: 'You can copy example code from our documentation and use it',
         image: step3Image
     }
 ];
