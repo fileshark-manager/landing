@@ -15,8 +15,6 @@ const FONTS = [
     }
 ];
 
-const fontLoader = generateFontConfig({PATHS, FONTS}); // Dynamic generation of rules for fonts
-
 export default {
     siteRoot: 'https://fileshark-manager.github.io',
     basePath: 'landing',
@@ -35,6 +33,8 @@ export default {
     ]),
     webpack: (config, {defaultLoaders, stage}) => {
         let loaders = [];
+
+        const fontLoader = generateFontConfig({PATHS, FONTS, stage}); // Dynamic generation of rules for fonts
 
         if (stage === 'dev') {
             loaders = [
