@@ -741,7 +741,21 @@ const Server = () => (
         <br />
         <br />
 
+        <h4>
+            <ul>
+                <li>DELETE /yourFileEndpoint/idOfDeletedFile - delete file</li>
+            </ul>
+        </h4>
 
+        <p>No request parameters.</p>
+
+        <p>Expected response:</p>
+
+        <DocumentationCode>
+            {'dfd8c3e4-45b3-4278-acba-467b42dae5f9'}
+        </DocumentationCode>
+
+        <DocumentationInfo type="String" description="id of deleted file" />
     </DocumentationSection>
 );
 
