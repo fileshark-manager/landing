@@ -1,5 +1,6 @@
 import React from 'react';
 import {withSiteData} from 'react-static';
+import flow from 'lodash/flow';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
@@ -8,6 +9,7 @@ import Steps from '../components/Steps';
 import Reviews from '../components/Reviews';
 import RoadMap from '../components/RoadMap';
 import CtaBox from '../components/CtaBox';
+import TrackedComponent from '../HOC/TrackedComponent';
 
 /**
  * Renders Home component
@@ -31,4 +33,7 @@ const Home = () => (
     </Layout>
 );
 
-export default withSiteData(Home);
+export default flow(
+    TrackedComponent,
+    withSiteData
+)(Home);

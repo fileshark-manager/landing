@@ -1,7 +1,9 @@
 import React from 'react';
 import {withSiteData} from 'react-static';
+import flow from 'lodash/flow';
 import Layout from '../components/Layout';
 import DocumentationComponent from '../components/Documentation';
+import TrackedComponent from '../HOC/TrackedComponent';
 
 /**
  * Renders Documentation component
@@ -13,4 +15,7 @@ const Documentation = () => (
     </Layout>
 );
 
-export default withSiteData(Documentation);
+export default flow(
+    TrackedComponent,
+    withSiteData
+)(Documentation);
