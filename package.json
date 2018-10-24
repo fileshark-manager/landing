@@ -23,6 +23,7 @@
         "normalize-scss": "^7.0.1",
         "react": "^16.0.0",
         "react-dom": "^16.0.0",
+        "react-ga": "^2.5.3",
         "react-hot-loader": "^4.3.11",
         "react-router": "^4.2.0",
         "react-slick": "^0.23.1",
