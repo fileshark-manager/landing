@@ -4,9 +4,11 @@ import {Head} from 'react-static';
 import faviconApple from '../../assets/images/favicon/apple-touch-icon.png';
 import faviconBig from '../../assets/images/favicon/favicon-32x32.png';
 import faviconSmall from '../../assets/images/favicon/favicon-16x16.png';
-
 import faviconSafari from '../../assets/images/favicon/safari-pinned-tab.svg';
 import faviconIco from '../../assets/images/favicon/favicon.ico';
+import config from '../../config';
+
+const {gaCode = ''} = config;
 
 /**
  * Renders HeadContainer component
@@ -33,6 +35,9 @@ const HeadContainer = ({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="msapplication-config" content="/static/images/favicon/browserconfig.xml" />
         <meta name="theme-color" content="#FFFFFF" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128053424-1" />
+        <script>{gaCode}</script>
     </Head>
 );
 
