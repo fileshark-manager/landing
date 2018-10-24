@@ -21,6 +21,9 @@ const HeadContainer = ({
     metaKeywords,
 }) => (
     <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128053424-1" />
+        <script>{gaCode}</script>
+
         <meta name="Description" content={metaDescription} />
         <meta name="Keywords" content={metaKeywords} />
 
@@ -35,9 +38,6 @@ const HeadContainer = ({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="msapplication-config" content="/static/images/favicon/browserconfig.xml" />
         <meta name="theme-color" content="#FFFFFF" />
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128053424-1" />
-        <script>{gaCode}</script>
     </Head>
 );
 
