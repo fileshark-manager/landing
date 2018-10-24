@@ -49,12 +49,5 @@ Other information %0D%0A
 
 export default {
     purchaseLink: 'http://ya.ru',
-    contactLink: `mailto:fileshark.mm@gmail.com?subject=${subject}&body=${body}`,
-    gaCode: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-128053424-1');
-    `
+    contactLink: `mailto:fileshark.mm@gmail.com?subject=${subject}&body=${body}`
 };

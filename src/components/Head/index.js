@@ -6,9 +6,6 @@ import faviconBig from '../../assets/images/favicon/favicon-32x32.png';
 import faviconSmall from '../../assets/images/favicon/favicon-16x16.png';
 import faviconSafari from '../../assets/images/favicon/safari-pinned-tab.svg';
 import faviconIco from '../../assets/images/favicon/favicon.ico';
-import config from '../../config';
-
-const {gaCode = ''} = config;
 
 /**
  * Renders HeadContainer component
@@ -21,9 +18,6 @@ const HeadContainer = ({
     metaKeywords,
 }) => (
     <Head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128053424-1" />
-        <script>{gaCode}</script>
-
         <meta name="Description" content={metaDescription} />
         <meta name="Keywords" content={metaKeywords} />
 
