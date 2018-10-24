@@ -7,7 +7,9 @@ import './index.scss';
 
 class App extends Component {
     componentWillMount() {
-        ReactGA.initialize('UA-128053424-1');
+        if (typeof window !== 'undefined') {
+            ReactGA.initialize('UA-128053424-1');
+        }
     }
 
     render() {

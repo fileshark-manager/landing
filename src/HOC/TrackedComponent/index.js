@@ -16,11 +16,9 @@ const TrackedComponent = (ComposedComponent) => {
          * Handles componentDidMount event
          */
         componentWillMount() {
-            const path = (typeof window !== 'undefined')
-                ? window.location.pathname + window.location.search
-                : '/';
-
-            ReactGA.pageview(path);
+            if (typeof window !== 'undefined') {
+                ReactGA.pageview(window.location.pathname + window.location.search);
+            }
         }
 
         /**
