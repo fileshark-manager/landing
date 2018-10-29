@@ -3,6 +3,7 @@ import GettingStarted from '../GettingStarted';
 import Setup from '../Setup';
 import Usage from '../Usage';
 import Server from '../Server';
+import BrowsersSupport from '../BrowsersSupport';
 
 /**
  * Renders Data component
@@ -17,6 +18,8 @@ const Data = () => (
         <Usage />
 
         <Server />
+
+        <BrowsersSupport />
     </div>
 );
 

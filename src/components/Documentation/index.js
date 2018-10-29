@@ -42,6 +42,12 @@ const Documentation = () => (
                                         <h4>Server</h4>
                                     </Link>
                                 </li>
+
+                                <li className="Documentation__item">
+                                    <Link to="#browsers-support">
+                                        <h4>Browsers support</h4>
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                     </div>
