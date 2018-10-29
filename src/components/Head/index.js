@@ -20,6 +20,7 @@ const HeadContainer = ({
     <Head>
         <meta name="Description" content={metaDescription} />
         <meta name="Keywords" content={metaKeywords} />
+        <meta name="yandex-verification" content="f7b9309755c878c7" />
 
         <title>{title}</title>
 

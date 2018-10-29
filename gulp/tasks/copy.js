@@ -7,8 +7,5 @@ gulp.task('copy', () => {
     gulp.src('./google5af196874a5d7276.html')
         .pipe(gulp.dest('./dist'));
 
-    gulp.src('./yandex_f7b9309755c878c7.html')
-        .pipe(gulp.dest('./dist'));
-
     return true;
 });
