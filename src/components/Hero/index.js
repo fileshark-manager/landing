@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from '../Button';
+import Video from '../Video';
 import heroImage from '../../assets/images/vis-hero.png';
+import videoData from '../../data/heroVideo';
 import config from '../../config';
 import './index.scss';
 
@@ -36,6 +38,10 @@ const Hero = () => (
                 <div className="Hero__graphics">
                     <div className="Hero__image">
                         <img src={heroImage} alt="Media manager" />
+
+                        <div className="Hero__video">
+                            <Video {...videoData} />
+                        </div>
                     </div>
                 </div>
             </div>

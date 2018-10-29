@@ -90,6 +90,19 @@ $Hero: '.Hero';
         }
     }
 
+    &__video {
+        position: absolute;
+        display: block;
+        width: 70%;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include respond-to('increased') {
+            top: 48%;
+        }
+    }
+
     &__title {
         margin-bottom: 20px;
 
