@@ -6,7 +6,7 @@ import videoData from '../../data/heroVideo';
 import config from '../../config';
 import './index.scss';
 
-const {purchaseLink = ''} = config;
+const {purchaseLink = '', demoLink = ''} = config;
 
 /**
  * Renders Hero component
@@ -30,6 +30,13 @@ const Hero = () => (
                             <Button
                                 href={purchaseLink}
                                 text="Buy"
+                                size="medium" />
+
+                            <Button
+                                href={demoLink}
+                                target="_blank"
+                                text="Live demo"
+                                theme="secondary"
                                 size="medium" />
                         </div>
                     </div>

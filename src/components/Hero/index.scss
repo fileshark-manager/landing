@@ -139,6 +139,27 @@ $Hero: '.Hero';
         @include respond-to('increased') {
             justify-content: center;
         }
+
+        @include respond-to('ultrasmall') {
+            flex-wrap: wrap;
+        }
+
+        .Button {
+            margin-right: 20px;
+
+            @include respond-to('ultrasmall') {
+                margin: 0 10px 20px;
+            }
+
+            @include f-last(1) {
+                margin-right: 0;
+
+                @include respond-to('ultrasmall') {
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 
     &__border {

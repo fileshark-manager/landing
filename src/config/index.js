@@ -49,5 +49,6 @@ Other information %0D%0A
 
 export default {
     purchaseLink: 'http://ya.ru',
-    contactLink: `mailto:fileshark.mm@gmail.com?subject=${subject}&body=${body}`
+    contactLink: `mailto:fileshark.mm@gmail.com?subject=${subject}&body=${body}`,
+    demoLink: 'https://media-manager-front.herokuapp.com/'
 };

@@ -67,15 +67,16 @@ $linkButton: 'a.Button';
         }
     }
 
-    //&#{$Button}_theme_secondary {
-    //    border-color: map-get($colors, activate);
-    //    background-color: map-get($colors, activate);
-    //
-    //    &:hover {
-    //        color: map-get($colors, activate);
-    //        background-color: transparent;
-    //    }
-    //}
+    &#{$Button}_theme_secondary {
+        color: map-get($colors, white);
+        border-color: map-get($colors, white);
+        background-color: transparent;
+
+        &:hover {
+            color: map-get($colors, white);
+            background-color: transparent;
+        }
+    }
 
     //&#{$Button}_theme_disabled {
     //    color: map-get($colors, asfalt-black);
