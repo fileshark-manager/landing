@@ -13,8 +13,8 @@ const GettingStarted = () => (
         <p>To start using «File.Shark» media manager it is necessary to do the next things:</p>
 
         <ul>
-            <li>download archive with files (in this archive you will find <i>index.html</i> file with example of launching media manager, <i>File.Shark Media manager - Documentation.pdf</i> file with documentation, js folder with <i>main-[hash].js</i> file)</li>
-            <li>include <i>main-[hash].js</i> file to your page</li>
+            <li>download archive with files (in this archive you will find <i>index.html</i> file with example of launching media manager, <i>File.Shark Media manager - Documentation.pdf</i> file with documentation, js folder with <i>main.js</i> file)</li>
+            <li>include <i>main.js</i> file to your page</li>
             <li>initialize «File.Shark» media manager (check <Link to="#usage">usage</Link> section for more details)</li>
             <li>configure the server to work with media manager</li>
         </ul>
