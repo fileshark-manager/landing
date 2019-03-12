@@ -34,7 +34,8 @@ $Documentation: '.Documentation';
     ol,
     pre,
     .DocumentationInfo,
-    .DocumentationTable {
+    .DocumentationTable,
+    .Notification {
         margin-bottom: 1.5em;
 
         @include f-last(1) {
