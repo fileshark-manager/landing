@@ -1,0 +1,18 @@
+@import '../Root/style/variables';
+@import '../Root/style/mixins';
+
+$Layout: '.Layout';
+
+#{$Layout} {
+    &__header {
+        @include print-version {
+            display: none;
+        }
+    }
+
+    &__footer {
+        @include print-version {
+            display: none;
+        }
+    }
+}
