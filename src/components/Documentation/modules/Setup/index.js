@@ -10,9 +10,9 @@ const Setup = () => (
     <DocumentationSection id="setup">
         <h1>Setup</h1>
 
-        <p>Include the <strong>main.js</strong> file into your page. You can find this file in the archive, in the <strong>js</strong> folder.</p>
+        <p>Include the <strong>file.shark.js</strong> file into your page. You can find this file in the archive, in the <strong>js</strong> folder.</p>
 
-        <DocumentationCode language="html">{'<script src="/js/main.js"></script>'}</DocumentationCode>
+        <DocumentationCode language="html">{'<script src="/js/file.shark.js"></script>'}</DocumentationCode>
     </DocumentationSection>
 );
 
