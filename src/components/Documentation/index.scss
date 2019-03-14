@@ -73,6 +73,10 @@ $Documentation: '.Documentation';
         @include respond-to('increased') {
             display: none;
         }
+
+        @include print-version {
+            display: none;
+        }
     }
 
     &__panel {
