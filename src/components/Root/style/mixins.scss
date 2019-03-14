@@ -219,3 +219,8 @@
     }
 }
 
+@mixin print-version {
+    @media print {
+        @content;
+    }
+}
