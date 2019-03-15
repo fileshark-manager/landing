@@ -43,6 +43,7 @@ const Header = () => (
                     <div className="Header__cta">
                         <Button
                             href={purchaseLink}
+                            target="_blank"
                             text="Buy"
                             size="small" />
                     </div>
