@@ -173,6 +173,7 @@ class Steps extends Component {
                             <div className="Steps__cta">
                                 <Button
                                     href={purchaseLink}
+                                    target="_blank"
                                     theme="alert"
                                     size="medium"
                                     text="Buy" />
