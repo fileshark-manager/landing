@@ -10,7 +10,7 @@ export default [
     },
     {
         title: 'Include all required files',
-        description: 'Include the <strong>main.js</strong> file into your page',
+        description: 'Include the <strong>file.shark.js</strong> file into your page',
         image: step2Image
     },
     {
