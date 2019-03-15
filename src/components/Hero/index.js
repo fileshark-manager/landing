@@ -29,6 +29,7 @@ const Hero = () => (
                         <div className="Hero__cta">
                             <Button
                                 href={purchaseLink}
+                                target="_blank"
                                 text="Buy"
                                 size="medium" />
 
