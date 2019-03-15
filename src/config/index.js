@@ -48,7 +48,7 @@ Other information %0D%0A
 `;
 
 export default {
-    purchaseLink: 'http://ya.ru',
+    purchaseLink: 'https://codecanyon.net/item/media-manager/22820280',
     contactLink: `mailto:fileshark.mm@gmail.com?subject=${subject}&body=${body}`,
     demoLink: 'https://media-manager-front.herokuapp.com/'
 };
