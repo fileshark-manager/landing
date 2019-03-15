@@ -19,6 +19,7 @@ const CtaBox = () => (
             <div className="CtaBox__content">
                 <Button
                     href={purchaseLink}
+                    target="_blank"
                     text="Buy"
                     size="medium" />
             </div>
