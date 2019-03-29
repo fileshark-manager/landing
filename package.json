@@ -1,6 +1,15 @@
 {
-    "name": "react-static-example-basic",
+    "name": "fileshark-media-manager-landing",
     "version": "1.0.1",
+    "description": "Landing page for File.Shark media manager.",
+    "keywords": [
+        "javascript",
+        "media-manager",
+        "media",
+        "manager",
+        "landing",
+        "react"
+    ],
     "main": "index.js",
     "license": "MIT",
     "scripts": {
